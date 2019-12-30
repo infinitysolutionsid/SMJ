@@ -11,6 +11,8 @@
 
 <link href="{!!asset('css/plugins.css')!!}" rel="stylesheet">
 <link href="{!!asset('css/style.css')!!}" rel="stylesheet">
+<link rel="stylesheet" href="{!!asset('fontawesome/css/all.min.css')!!}">
+<link rel="stylesheet" href="{!!asset('fontawesome/css/fontawesome.css')!!}">
 
 <link href="{!!asset('css/blue-dark.css')!!}" rel="stylesheet" type="text/css" media="screen">
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,800,700,600%7CRaleway:100,300,600,700,800" rel="stylesheet" type="text/css" />
@@ -1064,5 +1066,8 @@ All rights reserved. Copyright © 2019. INSPIRO.</p>
 <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZIus-_huNW25Jl7RPmHgoGZjD5udgBMI'></script>
 <script type="text/javascript" src="{!!asset('js/gmap3.min.js')!!}"></script>
 <script type="text/javascript" src="{!!asset('js/map-styles.js')!!}"></script>
+<script src="{!!asset('fontawesome/js/all.min.js')!!}"></script>
+<script src="{!!asset('fontawesome/js/conflict-detection.min.js')!!}"></script>
+<script src="{!!asset('fontawesome/js/fontawesome.js')!!}"></script>
 </body>
 </html>
