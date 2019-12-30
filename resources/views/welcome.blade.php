@@ -158,7 +158,7 @@
             </div>
         </div>
 
-        <section class="text-center">
+        <section>
             <div class="container">
                 <div data-animate="fadeInUp"
                     class="heading-text heading-section text-center m-b-40 animated fadeInUp visible">
@@ -167,26 +167,30 @@
                         sudah dipercaya oleh beberapa client ternama. Dan saat ini Sumber Diesel sudah membuka cabang di
                         Jakarta.</span>
                 </div>
+            </div>
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <img src="homepages/car-service/images/icons/1.png" alt="">
-                        <h3 class="m-b-10">OIL SERVICE</h3>
-                        <span>The most happiest time of the day!. Morbi sagittis, sem quis lacinia faucibus. </span>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="{!!asset('storage/img/hydraulic.jpg')!!}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Hydraulic Dump Truck</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">See products</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-3">
-                        <img src="homepages/car-service/images/icons/2.png" alt="">
-                        <h3 class="m-b-10">BRAKE CONTROL</h3>
-                        <span>The most happiest time of the day!. Morbi sagittis, sem quis lacinia faucibus. </span>
-                    </div>
-                    <div class="col-lg-3">
-                        <img src="homepages/car-service/images/icons/3.png" alt="">
-                        <h3 class="m-b-10">BATTERY CHECKER</h3>
-                        <span>The most happiest time of the day!. Morbi sagittis, sem quis lacinia faucibus. </span>
-                    </div>
-                    <div class="col-lg-3">
-                        <img src="homepages/car-service/images/icons/4.png" alt="">
-                        <h3 class="m-b-10">ENGINE CHECK</h3>
-                        <span>The most happiest time of the day!. Morbi sagittis, sem quis lacinia faucibus. </span>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img src="{!!asset('storage/img/sparepart.jpg')!!}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Spareparts Diesel</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">See products</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -196,10 +200,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
-                        <div class="text-medium">CAR MAINTENANCE</div>
-                        <p class="lead">
-                            Beautiful websites are now easy to made! Ready to Purchase POLO Template?
-                        </p>
+                        <div class="text-medium">TRUCK SPAREPARTS</div>
                         <div class="accordion toggle fancy clean accordion-transparent">
                             <div class="ac-item">
                                 <h5 class="ac-title">OIL & FILTERS</h5>
@@ -270,127 +271,13 @@
             </div>
         </section>
 
-        <section id="section3" class="no-padding">
-
-            <div id="portfolio" class="grid-layout portfolio-4-columns" data-margin="0">
-
-                <div class="portfolio-item img-zoom ct-photography ct-marketing ct-media">
-                    <div class="portfolio-item-wrap">
-                        <div class="portfolio-image">
-                            <a href="#"><img src="homepages/car-service/images/gallery/1.jpg" alt=""></a>
-                        </div>
-                        <div class="portfolio-description">
-                            <a title="Paper Pouch!" data-lightbox="image"
-                                href="homepages/car-service/images/gallery/1.jpg"
-                                class="btn btn-light btn-rounded">Zoom</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item img-zoom ct-photography ct-media ct-branding ct-Media">
-                    <div class="portfolio-item-wrap">
-                        <div class="portfolio-image">
-                            <a href="#"><img src="homepages/car-service/images/gallery/2.jpg" alt=""></a>
-                        </div>
-                        <div class="portfolio-description">
-                            <a title="Paper Pouch!" data-lightbox="image"
-                                href="homepages/car-service/images/gallery/2.jpg"
-                                class="btn btn-light btn-rounded">Zoom</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item img-zoom ct-photography ct-media ct-branding ct-marketing ct-webdesign">
-                    <div class="portfolio-item-wrap">
-                        <div class="portfolio-image">
-                            <a href="#"><img src="homepages/car-service/images/gallery/3.jpg" alt=""></a>
-                        </div>
-                        <div class="portfolio-description">
-                            <a title="Paper Pouch!" data-lightbox="image"
-                                href="homepages/car-service/images/gallery/3.jpg"
-                                class="btn btn-light btn-rounded">Zoom</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item img-zoom ct-marketing ct-media ct-branding ct-marketing ct-webdesign">
-                    <div class="portfolio-item-wrap">
-                        <div class="portfolio-image">
-                            <a href="#"><img src="homepages/car-service/images/gallery/4.jpg" alt=""></a>
-                        </div>
-                        <div class="portfolio-description">
-                            <a title="Paper Pouch!" data-lightbox="image"
-                                href="homepages/car-service/images/gallery/4.jpg"
-                                class="btn btn-light btn-rounded">Zoom</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item img-zoom ct-photography ct-media ct-branding ct-marketing ct-webdesign">
-                    <div class="portfolio-item-wrap">
-                        <div class="portfolio-image">
-                            <a href="#"><img src="homepages/car-service/images/gallery/5.jpg" alt=""></a>
-                        </div>
-                        <div class="portfolio-description">
-                            <a title="Paper Pouch!" data-lightbox="image"
-                                href="homepages/car-service/images/gallery/5.jpg"
-                                class="btn btn-light btn-rounded">Zoom</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="portfolio-item img-zoom ct-photography ct-media ct-branding ct-Media ct-marketing ct-webdesign">
-                    <div class="portfolio-item-wrap">
-                        <div class="portfolio-image">
-                            <a href="#"><img src="homepages/car-service/images/gallery/6.jpg" alt=""></a>
-                        </div>
-                        <div class="portfolio-description">
-                            <a title="Paper Pouch!" data-lightbox="image"
-                                href="homepages/car-service/images/gallery/6.jpg"
-                                class="btn btn-light btn-rounded">Zoom</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item img-zoom ct-photography ct-marketing ct-media">
-                    <div class="portfolio-item-wrap">
-                        <div class="portfolio-image">
-                            <a href="#"><img src="homepages/car-service/images/gallery/7.jpg" alt=""></a>
-                        </div>
-                        <div class="portfolio-description">
-                            <a title="Paper Pouch!" data-lightbox="image"
-                                href="homepages/car-service/images/gallery/7.jpg"
-                                class="btn btn-light btn-rounded">Zoom</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item img-zoom ct-marketing ct-media ct-branding ct-marketing ct-webdesign">
-                    <div class="portfolio-item-wrap">
-                        <div class="portfolio-image">
-                            <a href="#"><img src="homepages/car-service/images/gallery/8.jpg" alt=""></a>
-                        </div>
-                        <div class="portfolio-description">
-                            <a title="Paper Pouch!" data-lightbox="image"
-                                href="homepages/car-service/images/gallery/8.jpg"
-                                class="btn btn-light btn-rounded">Zoom</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
         <section class="p-t-150 p-b-150 text-light"
-            style="background-image:url(homepages/car-service/images/parallax/1.jpg);">
-            <div class="bg-overlay"></div>
+            style="background-image:url({!!asset('storage/img/truck-1sect.jpg')!!});">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="text-lg">CAR PERFORMANCE</h2>
-                        <p class="lead">Beautiful websites are now easy to made! Ready to Purchase POLO Template?</p>
+                        <h2 class="text-lg">PRODUCT QUALITY</h2>
+                        <p class="lead"></p>
                     </div>
                 </div>
                 <div class="row">
@@ -413,9 +300,9 @@
                         <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor.</p>
                     </div>
                     <div class="col-lg-3 text-center" data-animate="fadeInUp" data-animate-delay="400">
-                        <div class="pie-chart" data-percent="44" data-color="#FCC43F" data-width="14"> <span
+                        <div class="pie-chart" data-percent="99" data-color="#FCC43F" data-width="14"> <span
                                 class="percent"></span> </div>
-                        <h4>Employees</h4>
+                        <h4>ORIGINAL</h4>
                         <p>Lorem ipsum dolor sit amet, consecte adipiscing elit. Suspendisse condimentum porttitor
                             cursumus.</p>
                     </div>
@@ -425,8 +312,7 @@
 
         <section id="section6" class="no-padding">
 
-            <div class="map" data-latitude="-37.817240" data-longitude="144.955826" data-style="light"
-                data-info="Hello from &lt;br&gt; Inspiro Themes"></div>
+            <div class="map" data-latitude="3.610138" data-longitude="98.688829" data-style="light"></div>
 
         </section>
 
@@ -436,28 +322,14 @@
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="widget">
-                                <div class="widget-title">Polo HTML5 Template</div>
-                                <p class="mb-5">Built with love in Fort Worth, Texas, USA
-                                    <br> All rights reserved. Copyright © 2019. INSPIRO.</p>
-                                <a href="https://themeforest.net/item/polo-responsive-multipurpose-html5-template/13708923"
-                                    class="btn btn-inverted">Purchase Now</a>
+                                <div class="widget-title">Sumber Diesel</div>
+                                <p class="mb-5">Built with love by <a href="https://infinitysolutions.co.id">Infinity
+                                        Solutions</a>
+                                    <br> All rights reserved. Copyright © 2019. Infinity Solutions.</p>
                             </div>
                         </div>
-                        <div class="col-lg-7">
+                        {{-- <div class="col-lg-7">
                             <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="widget">
-                                        <div class="widget-title">Discover</div>
-                                        <ul class="list">
-                                            <li><a href="#">Features</a></li>
-                                            <li><a href="#">Layouts</a></li>
-                                            <li><a href="#">Corporate</a></li>
-                                            <li><a href="#">Updates</a></li>
-                                            <li><a href="#">Pricing</a></li>
-                                            <li><a href="#">Customers</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="col-lg-3">
                                     <div class="widget">
                                         <div class="widget-title">Features</div>
@@ -469,35 +341,16 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
-                                    <div class="widget">
-                                        <div class="widget-title">Pages</div>
-                                        <ul class="list">
-                                            <li><a href="#">Portfolio</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Shop</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="widget">
-                                        <div class="widget-title">Support</div>
-                                        <ul class="list">
-                                            <li><a href="#">Help Desk</a></li>
-                                            <li><a href="#">Documentation</a></li>
-                                            <li><a href="#">Contact Us</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
             <div class="copyright-content">
                 <div class="container">
-                    <div class="copyright-text text-center">&copy; 2019 POLO - Responsive Multi-Purpose HTML5 Template.
-                        All Rights Reserved.<a href="//www.inspiro-media.com" target="_blank"> INSPIRO</a> </div>
+                    <div class="copyright-text text-center">&copy; 2019 SUMBER DIESEL
+                        All Rights Reserved.<a href="//infinitysolutions.co.id" target="_blank"> Infinity Solutions</a>
+                    </div>
                 </div>
             </div>
         </footer>
