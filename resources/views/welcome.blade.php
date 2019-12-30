@@ -27,8 +27,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="top-menu">
-                            <li><a href="#">Phone: +62 812 0000-0000</a></li>
-                            <li><a href="#">Email: info@sumberparts.com</a></li>
+                            <li><a href="/tel:081200000000">Phone: +62 812 0000-0000</a></li>
+                            <li><a href="/mailto:info@sumberparts.com">Email: info@sumberparts.com</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6 d-none d-sm-block">
@@ -49,49 +49,24 @@
             <div class="header-inner">
                 <div class="container">
 
-                    <div id="logo"> <a href="index.html"><span class="logo-default">SMJ</span><span
+                    <div id="logo"> <a href="/"><span class="logo-default">SMJ</span><span
                                 class="logo-dark">SMJ</span></a> </div>
-
-                    {{-- <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
-                        <form class="search-form" action="search-results-page.html" method="get">
-                            <input class="form-control" name="q" type="search" placeholder="Type & Search..." />
-                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
-                        </form>
-                    </div>
-
-                    <div class="header-extras">
-                        <ul>
-                            <li>
-                                <a id="btn-search" href="#"> <i class="icon-search"></i></a>
-                            </li>
-                            <li>
-                                <div class="p-dropdown"> <a href="#"><i class="icon-globe"></i><span>EN</span></a>
-                                    <ul class="p-dropdown-content">
-                                        <li><a href="#">French</a></li>
-                                        <li><a href="#">Spanish</a></li>
-                                        <li><a href="#">English</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div> --}}
-
                     <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> </div>
 
                     <div id="mainMenu">
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="/">Home</a></li>
                                     <li class="dropdown"><a href="#">Shop</a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="#">Hydraulic Dump Truck</a>
+                                            <li><a href="/hydraulic-dump-truck">Hydraulic Dump Truck</a>
                                             </li>
-                                            <li><a href="#">Diesel</a></li>
+                                            <li><a href="/diesel">Diesel</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="/about">About us</a></li>
+                                    <li><a href="/contact">Contact us</a></li>
                                 </ul>
                             </nav>
                         </div>

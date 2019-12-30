@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/hydraulic-dump-truck', 'homepageController@shop1');
+Route::get('/diesel', 'homepageController@shop2');
