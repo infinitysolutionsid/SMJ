@@ -109,29 +109,25 @@
 
                         <div class="col-lg-7 right text-light">
                             <div class="hero-heading-2 background-colored text-light">
-                                <i class="fa fa-car"></i>
                                 <h3 class="m-b-0">BUAT TRUCKMU MENGGUNAKAN SUKU CADANG BERKUALITAS</h3>
                                 <h2 class="text-medium m-t-0">SPAREPART QUALITY</h2>
                                 <p class="lead">You need help with your truck? Let us recommend our product for you!</p>
-                                <a class="btn btn-light" href="#">MAKE APPOINTMENT</a>
+                                <a class="btn btn-light" href="#appointment">MAKE APPOINTMENT</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-
             <div class="slide" style="background-image:url('{!!asset('storage/img/truck-2-cover.jpg')!!}');">
                 <div class="container">
                     <div class="slide-captions text-left text-light">
 
                         <div class="col-lg-7 center text-center text-light">
                             <div class="hero-heading-2 background-colored text-light">
-                                <i class="fa fa-wrench"></i>
-                                <h3 class="m-b-0">MAKE YOUR CAR HAPPY</h3>
+                                <h3 class="m-b-0">MAKE YOUR TRUCK SAFE</h3>
                                 <h2 class="text-medium m-t-0">CHANGE OIL</h2>
-                                <p class="lead">You need help with your car? Let us fix it for you!</p>
-                                <a class="btn btn-light" href="#">MAKE APPOINTMENT</a>
+                                <p class="lead">You need help with your truck? Let us fix it for you!</p>
+                                <a class="btn btn-light" href="#appointment">MAKE APPOINTMENT</a>
                             </div>
                         </div>
 
@@ -196,7 +192,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="appointment">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
