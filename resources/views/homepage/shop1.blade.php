@@ -350,7 +350,7 @@
 </section>
 
 
-<section class="background-grey p-t-40 p-b-0">
+{{-- <section class="background-grey p-t-40 p-b-0">
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
@@ -382,5 +382,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 @endsection
