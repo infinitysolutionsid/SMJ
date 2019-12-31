@@ -3,8 +3,7 @@
 <section id="page-title">
     <div class="container">
         <div class="page-title">
-            <h1>Shop</h1>
-            <span>Shop 4 columns version</span>
+            <h1>Hydraulic Dump Truck</h1>
         </div>
         <div class="breadcrumb">
             <ul>
@@ -12,7 +11,7 @@
                 </li>
                 <li><a href="#">Shop</a>
                 </li>
-                <li class="active"><a href="#">4 columns version</a>
+                <li class="active"><a href="/hydraulic-dump-truck">Hydraulic Dump Truck</a>
                 </li>
             </ul>
         </div>
