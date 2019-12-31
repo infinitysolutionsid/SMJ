@@ -62,7 +62,7 @@
                                         <ul class="dropdown-menu">
                                             <li><a href="/hydraulic-dump-truck">Hydraulic Dump Truck</a>
                                             </li>
-                                            <li><a href="/diesel">Diesel</a></li>
+                                            <li><a href="#">Diesel</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="/about">About us</a></li>
