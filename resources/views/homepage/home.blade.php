@@ -1,4 +1,7 @@
 @extends('homepage.extends')
+@section('title','| Beranda')
+@section('keywords','sumber diesel, sumber parts, supplier sparepart truck, sparepart truck, truck, sparepart')
+@section('desc','Sumberparts.com adalah website toko dari toko CV. Sumber Diesel.')
 @section('content')
 <div id="slider" class="inspiro-slider" data-height-xs="360">
 
@@ -57,9 +60,9 @@
     <div class="container">
         <div data-animate="fadeInUp" class="heading-text heading-section text-center m-b-40 animated fadeInUp visible">
             <h2>Selamat datang di Sumber Diesel</h2>
-            <span class="lead">Sumber Diesel adalah toko sparepart truck yang sudah berdiri sejak tahun 2000 dan
-                sudah dipercaya oleh beberapa client ternama. Dan saat ini Sumber Diesel sudah membuka cabang di
-                Jakarta.</span>
+            <span class="lead"><strong>Sumber Diesel</strong> merupakan supplier spareparts truck dan hydraulic dump
+                truck yang
+                <strong>terpercaya</strong> dan <strong>terlengkap</strong> saat ini di Indonesia.</span>
         </div>
     </div>
     <div class="container">

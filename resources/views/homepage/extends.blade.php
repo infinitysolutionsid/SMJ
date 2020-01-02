@@ -3,11 +3,13 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="@yield('keywords')">
+    <meta name="description" content="@yield('desc')">
+
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="Bintang j Tobing" />
     <link rel="icon" type="image/png" href="images/favicon.png">
-
-    <title>CV. Sumber Mitra Sejati | Sumber Diesel</title>
+    <title>CV. Sumber Mitra Sejati @yield('title')</title>
 
     <link href="{!!asset('css/plugins.css')!!}" rel="stylesheet">
     <link href="{!!asset('css/style.css')!!}" rel="stylesheet">

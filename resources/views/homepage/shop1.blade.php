@@ -1,4 +1,7 @@
 @extends('homepage.extends')
+@section('title','| Produk Hydraulic Dump Truck')
+@section('keywords','hydraulic dump truck','sparepart truck','hydraulic')
+@section('desc','Halaman ini menjual berbagai produk Hydraulic Dump Truck dari Sumber Diesel.')
 @section('content')
 <section id="page-title">
     <div class="container">
