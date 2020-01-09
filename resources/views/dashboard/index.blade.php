@@ -289,6 +289,13 @@
                 "ordering": true,
                 "info": true,
             });
+            $('#tableItem').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+            });
         });
 
     </script>
