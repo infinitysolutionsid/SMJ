@@ -16,7 +16,10 @@ class dashboardController extends Controller
         $kategori = DB::table('categoriesSparepart')
             ->select('categoriesSparepart.*')
             ->get();
-        return view('dashboard.utility', ['kategori' => $kategori]);
+        $item = DB::table('items')
+            ->select('items.*')
+            ->get();
+        return view('dashboard.utility', ['kategori' => $kategori, 'item' => $item]);
     }
     public function kategoriadd(Request $request)
     {

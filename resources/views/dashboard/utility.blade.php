@@ -103,11 +103,11 @@
     <div class="col-lg-6">
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title">Category</h3>
+                <h3 class="card-title">Item</h3>
 
                 <div class="card-tools">
-                    <a href="" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tambahkategori">
-                        <i class=" fas fa-plus-circle"></i> Tambah data kategori
+                    <a href="" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tambahitem">
+                        <i class=" fas fa-plus-circle"></i> Tambah data item produk
                     </a>
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
                         title="Collapse">
@@ -116,12 +116,12 @@
                         title="Remove">
                         <i class="fas fa-times"></i></button>
                 </div>
-                {{-- MODAL TAMBAH KATEGORI --}}
-                <div class="modal fade" id="tambahkategori">
+                {{-- MODAL TAMBAH item --}}
+                <div class="modal fade" id="tambahitem">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title" style="color: #000 !important;">Tambah data kategori</h4>
+                                <h4 class="modal-title" style="color: #000 !important;">Tambah data item</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -163,31 +163,37 @@
                     <thead>
                         <tr>
                             <th width="10px">No.</th>
+                            <th>Nama produk</th>
                             <th>Kategori</th>
+                            <th>Gambar</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @if($kategori->count()>0)
-                        @foreach ($kategori as $kategori_item)
+                        @if($item->count()>0)
+                        @foreach ($item as $kategori_item)
                         <tr>
                             <td>{{$i++}}</td>
-                            <td>{{$kategori_item->nama_kategori}}
+                            <td>{{$kategori_item->nama_item}}
                             </td>
+                            <td>{{$kategori_item->kategori_id}}</td>
+                            <td>{{$kategori_item->images}}</td>
                             <td><a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a> <a href="#"
                                     class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a></td>
                         </tr>
                         @endforeach
                         @else
                         <tr>
-                            <td colspan="3" class="text-center">No data founded!</td>
+                            <td colspan="5" class="text-center">No data founded!</td>
                         </tr>
                         @endif
                     </tbody>
                     <tfoot>
                         <tr>
                             <th>No.</th>
+                            <th>Nama produk</th>
                             <th>Kategori</th>
+                            <th>Gambar</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
