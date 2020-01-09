@@ -17,8 +17,5 @@ Route::get('/sparepart-truck', 'homepageController@shop2');
 Route::get('/ajax-product', 'homepageController@quickview');
 
 // DASHBOARD
-Route::get('/tools', 'homepageController@tools');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/tools', 'homepageController@tools')->name('signin');
+Route::get('/dashboard', 'dashboardController@index');
