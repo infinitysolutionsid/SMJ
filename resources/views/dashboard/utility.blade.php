@@ -21,18 +21,25 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Large Modal</h4>
+                        <h4 class="modal-title">Tambah data kategori</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        <p>One fine body&hellip;</p>
-                    </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
-                    </div>
+                    <form action="/tambah-data-kategori" method="post">
+                        @csrf
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="kategori">Nama kategori</label>
+                                <input type="text" name="nama_kategori" id="nama_kategori" class="form-control"
+                                    placeholder="Masukkan nama kategori" autofocus>
+                            </div>
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
                 </div>
                 <!-- /.modal-content -->
             </div>
@@ -43,6 +50,16 @@
     <?php $i=1 ?>
     <div class="card-body">
         <table id="tableJs" class="table table-bordered table-hover">
+            {{-- ALERT  --}}
+            @if(session('sukses'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong><i class="far fa-check-circle"></i> Berhasil!</strong> {{session('sukses')}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @endif
+            {{-- END ALERT --}}
             <thead>
                 <tr>
                     <th width="10px">No.</th>

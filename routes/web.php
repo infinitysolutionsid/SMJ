@@ -21,3 +21,4 @@ Route::get('/tools', 'homepageController@tools')->name('signin');
 // NEED AUTH
 Route::get('/dashboard', 'dashboardController@index');
 Route::get('/utility-item', 'dashboardController@utility');
+Route::post('/tambah-data-kategori', 'dashboardController@kategoriadd');

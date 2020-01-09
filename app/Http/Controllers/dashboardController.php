@@ -18,4 +18,12 @@ class dashboardController extends Controller
             ->get();
         return view('dashboard.utility', ['kategori' => $kategori]);
     }
+    public function kategoriadd(Request $request)
+    {
+        $kategori = new \App\CategoriesModel;
+        $kategori->nama_kategori  = $request->nama_kategori;
+        $kategori->save();
+
+        return back()->with('sukses', 'Yeay, data kategori baru berhasil ditambahkan!');
+    }
 }
