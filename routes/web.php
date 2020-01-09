@@ -18,4 +18,6 @@ Route::get('/ajax-product', 'homepageController@quickview');
 
 // DASHBOARD
 Route::get('/tools', 'homepageController@tools')->name('signin');
+// NEED AUTH
 Route::get('/dashboard', 'dashboardController@index');
+Route::get('/utility-item', 'dashboardController@utility');
