@@ -185,12 +185,12 @@
             </thead>
             <tbody>
                 @if($item->count()>0)
-                @foreach ($item as $kategori_item)
+                @foreach ($itemkategori as $kategori_item)
                 <tr>
                     <td>{{$i++}}</td>
                     <td>{{$kategori_item->nama_item}}
                     </td>
-                    <td>{{$kategori_item->kategori_id}}</td>
+                    <td>@if($kategori_item->kategori_id){{$kategori_item->nama_kategori}}@endif</td>
                     <td><a href="{!!asset('storage/shop/img/'.$kategori_item->images)!!}" target="_blank">Open image
                             on a new tab</a></td>
                     <td><a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a> <a href="#"
