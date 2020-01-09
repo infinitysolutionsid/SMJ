@@ -1,12 +1,12 @@
 @extends('homepage.extends')
-@section('title','| Produk Hydraulic Dump Truck')
+@section('title','| Produk Sparepart truck')
 @section('keywords','hydraulic dump truck','sparepart truck','hydraulic')
 @section('desc','Halaman ini menjual berbagai produk Hydraulic Dump Truck dari Sumber Diesel.')
 @section('content')
 <section id="page-title">
     <div class="container">
         <div class="page-title">
-            <h1>Hydraulic Dump Truck</h1>
+            <h1>Sparepart Truck</h1>
         </div>
         <div class="breadcrumb">
             <ul>
@@ -14,14 +14,12 @@
                 </li>
                 <li><a href="#">Shop</a>
                 </li>
-                <li class="active"><a href="/hydraulic-dump-truck">Hydraulic Dump Truck</a>
+                <li class="active"><a href="/diesel">Sparepart Truck</a>
                 </li>
             </ul>
         </div>
     </div>
 </section>
-
-
 <section id="page-content" class="sidebar-right">
     <div class="container">
         <div class="row">

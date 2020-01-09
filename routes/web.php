@@ -13,5 +13,5 @@
 
 Route::get('/', 'homepageController@index');
 Route::get('/hydraulic-dump-truck', 'homepageController@shop1');
-Route::get('/diesel', 'homepageController@shop2');
+Route::get('/sparepart-truck', 'homepageController@shop2');
 Route::get('/ajax-product', 'homepageController@quickview');

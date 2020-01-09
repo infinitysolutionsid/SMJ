@@ -14,6 +14,10 @@ class homepageController extends Controller
     {
         return view('homepage.shop1');
     }
+    public function shop2()
+    {
+        return view('homepage.shop2');
+    }
     public function quickview()
     {
         return view('homepage.viewitem');
