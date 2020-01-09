@@ -17,7 +17,7 @@ class Item extends Migration
             $table->bigIncrements('id');
             $table->string('nama_item');
             $table->string('kategori_id');
-            $table->
+            $table->string('images');
             $table->timestamps();
         });
     }
