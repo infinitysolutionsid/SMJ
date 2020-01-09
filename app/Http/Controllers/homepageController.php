@@ -22,4 +22,8 @@ class homepageController extends Controller
     {
         return view('homepage.viewitem');
     }
+    public function tools()
+    {
+        return view('authen.login');
+    }
 }

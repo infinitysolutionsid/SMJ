@@ -10,8 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// PREVIEW
 Route::get('/', 'homepageController@index');
 Route::get('/hydraulic-dump-truck', 'homepageController@shop1');
 Route::get('/sparepart-truck', 'homepageController@shop2');
 Route::get('/ajax-product', 'homepageController@quickview');
+
+// DASHBOARD
+Route::get('/tools', 'homepageController@tools');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
