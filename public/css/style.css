@@ -20467,3 +20467,10 @@ body[data-bg-image] {
     margin-left: -60px;
     background-color: transparent;
 }
+
+.imglogosmj {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    padding-top: 10px;
+}

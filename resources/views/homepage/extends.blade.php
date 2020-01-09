@@ -52,24 +52,23 @@
             <div class="header-inner">
                 <div class="container">
 
-                    <div id="logo"> <a href="/"><span class="logo-default">SMJ</span><span
-                                class="logo-dark">SMJ</span></a> </div>
+                    <img src="{!!asset('storage/logo.png')!!}" class="imglogosmj" alt="logo smj">
                     <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> </div>
 
                     <div id="mainMenu">
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li><a href="/">Home</a></li>
-                                    <li class="dropdown"><a href="#">Shop</a>
+                                    <li><a href="/">Beranda</a></li>
+                                    <li class="dropdown"><a href="#">Produk kami</a>
                                         <ul class="dropdown-menu">
                                             <li><a href="/hydraulic-dump-truck">Hydraulic Dump Truck</a>
                                             </li>
                                             <li><a href="/sparepart-truck">Sparepart Truck</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="/about">About us</a></li>
-                                    <li><a href="/contact">Contact us</a></li>
+                                    <li><a href="/about">Tentang kami</a></li>
+                                    <li><a href="/contact">Hubungi kami</a></li>
                                 </ul>
                             </nav>
                         </div>

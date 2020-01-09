@@ -62,7 +62,7 @@
             <h2>Selamat datang di Sumber Diesel</h2>
             <span class="lead"><strong>Sumber Diesel</strong> merupakan supplier spareparts truck dan hydraulic dump
                 truck yang
-                <strong>terpercaya</strong> dan <strong>terlengkap</strong> saat ini di Indonesia.</span>
+                <strong>terpercaya</strong> dan <strong>terlengkap</strong> di Indonesia saat ini.</span>
         </div>
     </div>
     <div class="container">
