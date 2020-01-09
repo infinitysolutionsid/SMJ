@@ -63,7 +63,7 @@
         </div>
 
         <div class="shop">
-            <div class="grid-layout grid-4-columns" data-item="grid-item">
+            <div class="grid-layout grid-3-columns" data-item="grid-item">
                 <div class="grid-item">
                     <div class="product">
                         <div class="product-image">
@@ -254,6 +254,28 @@
                 <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
             </ul>
 
+        </div>
+    </div>
+    <div class="sidebar sticky-sidebar col-lg-3">
+
+        <div class="widget widget-archive">
+            <h4 class="widget-title">Product categories</h4>
+            <ul class="list list-lines">
+                <li><a href="#">Bags</a> <span class="count">(6)</span>
+                </li>
+                <li><a href="#">Jeans</a> <span class="count">(8)</span>
+                </li>
+                <li><a href="#">Shoes</a> <span class="count">(7)</span>
+                </li>
+                <li><a href="#">Sweaters</a> <span class="count">(7)</span>
+                </li>
+                <li><a href="#">T-Shirts</a> <span class="count">(9)</span>
+                </li>
+                <li><a href="#">Tops</a> <span class="count">(10)</span>
+                </li>
+                <li><a href="#">Women</a> <span class="count">(25)</span>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
