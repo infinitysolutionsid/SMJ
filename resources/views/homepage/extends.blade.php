@@ -23,7 +23,6 @@
 <body>
 
     <div class="body-inner">
-
         <div id="topbar" class="d-none d-xl-block d-lg-block">
             <div class="container">
                 <div class="row">
