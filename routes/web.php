@@ -22,3 +22,4 @@ Route::get('/tools', 'homepageController@tools')->name('signin');
 Route::get('/dashboard', 'dashboardController@index');
 Route::get('/utility-item', 'dashboardController@utility');
 Route::post('/tambah-data-kategori', 'dashboardController@kategoriadd');
+Route::post('/tambah-data-item', 'dashboardController@itemadd');

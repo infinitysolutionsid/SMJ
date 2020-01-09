@@ -284,6 +284,8 @@
         $(document).ready(function () {
             $('#tableJs').DataTable({
                 "paging": true,
+                "scrollY": "200px",
+                "scrollCollapse": true,
                 "lengthChange": true,
                 "searching": false,
                 "ordering": true,
@@ -291,6 +293,8 @@
             });
             $('#tableItem').DataTable({
                 "paging": true,
+                "scrollY": "300px",
+                "scrollCollapse": true,
                 "lengthChange": true,
                 "searching": false,
                 "ordering": true,

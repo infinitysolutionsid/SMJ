@@ -19,7 +19,11 @@ class dashboardController extends Controller
         $item = DB::table('items')
             ->select('items.*')
             ->get();
-        return view('dashboard.utility', ['kategori' => $kategori, 'item' => $item]);
+        $itemkategori = DB::table('items')
+            ->join('categoriesSparepart', 'categoriesSparepart.id', '=', 'items.kategori_id')
+            ->select('items.*', 'categoriesSparepart.*')
+            ->get();
+        return view('dashboard.utility', ['kategori' => $kategori, 'item' => $item, 'itemkategori' => $itemkategori]);
     }
     public function kategoriadd(Request $request)
     {
@@ -28,5 +32,19 @@ class dashboardController extends Controller
         $kategori->save();
 
         return back()->with('sukses', 'Yeay, data kategori baru berhasil ditambahkan!');
+    }
+    public function itemadd(Request $request)
+    {
+        $item = new \App\itemModel;
+        $item->nama_item  = $request->nama_item;
+        $item->kategori_id = $request->kategori_id;
+        $item->description = $request->description;
+        if ($request->hasFile('images')) {
+            $request->file('images')->move('storage/shop/img/', $request->file('images')->getClientOriginalName());
+            $item->images = $request->file('images')->getClientOriginalName();
+            $item->save();
+        }
+
+        return back()->with('suksesitem', 'Yeay, data produk baru berhasil ditambahkan!');
     }
 }
