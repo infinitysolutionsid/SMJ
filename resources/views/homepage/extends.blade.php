@@ -27,13 +27,14 @@
         <div id="topbar" class="d-none d-xl-block d-lg-block">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <ul class="top-menu">
-                            <li><a href="/tel:081200000000">Phone: +62 812 0000-0000</a></li>
+                            <li><a href="/tel:085370359971">Phone: +62 853 7035 9971</a></li>
+                            <li><a href="/tel:085277645378">Phone: +62 852 7764 5378</a></li>
                             <li><a href="/mailto:info@sumberparts.com">Email: info@sumberparts.com</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-6 d-none d-sm-block">
+                    <div class="col-md-4 d-none d-sm-block">
                         <div class="social-icons social-icons-colored-hover">
                             <ul>
                                 <li class="social-facebook"><a href="https://facebook.com/"><i

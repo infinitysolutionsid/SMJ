@@ -130,9 +130,15 @@
                                 @csrf
                                 <div class="modal-body">
                                     <div class="form-group" style="color: #000 !important;">
-                                        <label for="kategori">Nama kategori</label>
+                                        <label for="item">Nama item</label>
                                         <input type="text" name="nama_kategori" id="nama_kategori" class="form-control"
                                             placeholder="Masukkan nama kategori" autofocus>
+                                        <label for="kategori">Kategori</label>
+                                        <select name="" id="" class="form-control">
+                                            @foreach ($kategori as $katsel)
+                                            <option value="{{$katsel->id}}">{{$katsel->nama_kategori}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="modal-footer justify-content-between">
@@ -151,9 +157,9 @@
             <div class="card-body">
                 <table id="tableItem" class="table table-bordered table-hover">
                     {{-- ALERT  --}}
-                    @if(session('sukses'))
+                    @if(session('suksesitem'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong><i class="far fa-check-circle"></i> Berhasil!</strong> {{session('sukses')}}
+                        <strong><i class="far fa-check-circle"></i> Berhasil!</strong> {{session('suksesitem')}}
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

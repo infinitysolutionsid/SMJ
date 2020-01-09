@@ -74,7 +74,7 @@
                         <h5 class="card-title">Hydraulic Dump Truck</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the
                             bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">See products</a>
+                        <a href="/hydraulic-dump-truck" class="btn btn-primary">See products</a>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
                         <h5 class="card-title">Spareparts Diesel</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the
                             bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">See products</a>
+                        <a href="/sparepart-truck" class="btn btn-primary">See products</a>
                     </div>
                 </div>
             </div>
@@ -97,46 +97,27 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
-                <div class="text-medium">TRUCK SPAREPARTS</div>
+                <div class="text-medium">Product Info</div>
                 <div class="accordion toggle fancy clean accordion-transparent">
                     <div class="ac-item">
-                        <h5 class="ac-title">OIL & FILTERS</h5>
+                        <h5 class="ac-title">Hydraulic Dump Truck</h5>
                         <div class="ac-content">
-                            <h4>Pellentesque ipsum erat</h4> Neque porro quisquam est, qui dolorem ipsum quia
+                            Neque porro quisquam est, qui dolorem ipsum quia
                             dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
                             incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
                         </div>
                     </div>
                     <div class="ac-item">
-                        <h5 class="ac-title">ENGINE CHECKUP</h5>
+                        <h5 class="ac-title">Spareparts Truck</h5>
                         <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
                             consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
                             labore et dolore magnam aliquam quaerat voluptatem.</div>
                     </div>
-                    <div class="ac-item ac-active">
-                        <h5 class="ac-title">TIRE CHECKUP</h5>
-                        <div class="ac-content">
-                            <h4>Pellentesque ipsum erat</h4>
-                            <p>Facilisis ut venenatis eu, sodales vel dolor. The most happiest time of the day!.
-                                Morbi sagittis, sem quis lacinia faucibus, orci ipsum gravida tortor, vel
-                                interdum mi sapien ut justo. Neque porro quisquam est.
-                                <br />Adipisci velit. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                                amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-                                incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Neque porro
-                                quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                                velit, sed quia non numquam eius modi tempora incidunt.</p>
-                        </div>
-                    </div>
-                    <div class="ac-item">
-                        <h5 class="ac-title">WINTER PREPARE</h5>
-                        <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-                            labore et dolore magnam aliquam quaerat voluptatem.</div>
-                    </div>
+
                 </div>
             </div>
             <div class="col-lg-5 background-colored text-light p-40">
-                <div class="text-medium">MAKE APPOINTMENT</div>
+                <div class="text-medium">Contact Us</div>
                 <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form"
                     method="post">
                     <div class="form-group">
@@ -167,7 +148,7 @@
         </div>
     </div>
 </section>
-
+{{--
 <section class="p-t-150 p-b-150 text-light" style="background-image:url({!!asset('storage/img/truck-1sect.jpg')!!});">
     <div class="container">
         <div class="row">
@@ -204,11 +185,11 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <section id="section6" class="no-padding">
 
-    <div class="map" data-latitude="3.610138" data-longitude="98.688829" data-style="light"></div>
+    <div class="map" data-latitude="3.5834189" data-longitude="98.6816097" data-style="light"></div>
 
 </section>
 @endsection
