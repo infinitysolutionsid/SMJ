@@ -80,4 +80,26 @@ class homepageController extends Controller
         $pesan->save();
         return redirect('/')->with('sukses', 'Penawaran kamu berhasil kami terima. Kami akan menghubungi kamu dalam waktu 1x24 jam. Jika belum menerima email/panggilan telepon, kamu boleh mengirim pesan ke email info@sumberparts.com. Terima kasih.');
     }
+    public function kirimpesan(Request $request)
+    {
+        $pesan = new \App\MessagesModel;
+        $pesan->nama = $request->nama;
+        $pesan->email = $request->email;
+        $pesan->nohp = $request->nohp;
+        $pesan->subject = $request->subject;
+        $pesan->messages = $request->notes;
+        $pesan->logIP = $request->getClientIp();
+        $pesan->status = 'unread';
+
+        $pesan->save();
+        return back()->with('sukses', 'Yes');
+    }
+    public function about()
+    {
+        return view('homepage.about');
+    }
+    public function contact()
+    {
+        return view('homepage.contact');
+    }
 }

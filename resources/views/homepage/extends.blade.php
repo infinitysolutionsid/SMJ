@@ -83,7 +83,7 @@
             <div class="footer-content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-5">
+                        <div class="col-lg-4">
                             <div class="widget">
                                 <div class="widget-title">Sumber Diesel</div>
                                 <p class="mb-5">Built with love by <a href="https://infinitysolutions.co.id">Infinity
@@ -91,21 +91,23 @@
                                     <br> All rights reserved. Copyright © 2019. Infinity Solutions.</p>
                             </div>
                         </div>
-                        {{-- <div class="col-lg-7">
-                            <div class="row">
-                                <div class="col-lg-3">
-                                    <div class="widget">
-                                        <div class="widget-title">Features</div>
-                                        <ul class="list">
-                                            <li><a href="#">Layouts</a></li>
-                                            <li><a href="#">Headers</a></li>
-                                            <li><a href="#">Widgets</a></li>
-                                            <li><a href="#">Footers</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        <div class="col-lg-8">
+                            <div class="widget">
+                                <div class="widget-title">Kantor Kami</div>
+                                <h5>Medan</h5>
+                                <p>Jl. Rahmadsyah No. 33 C<br>
+                                    Kotamatsum III. Kec.Medan<br>
+                                    Kota Medan, Sumatera Utara, 20212<br>
+                                    <i class="fas fa-phone"></i> +62 853 7035 9971</p>
                             </div>
-                        </div> --}}
+                            <div class="widget">
+                                <h5>Jakarta</h5>
+                                <p>Green Sedayu Bizpark<br>
+                                    Jl. Daan Mogot Km. 18 Blok DM1/100<br>
+                                    Kalideres, Jakarta Barat 11840<br>
+                                    <i class="fas fa-phone"></i> +62 852 7764 5378</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

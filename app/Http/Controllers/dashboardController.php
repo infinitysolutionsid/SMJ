@@ -31,12 +31,10 @@ class dashboardController extends Controller
     {
         $messages = DB::table('messages')
             ->select('messages.*')
+            ->orderBy('messages.created_at', 'DESC')
             ->paginate(30);
-        $inbox = DB::table('messages')
-            ->where('status', '=', 'unread')
-            ->select('messages.*')
-            ->get();
-        return view('dashboard.folderpesan.inbox', ['messages' => $messages, 'inbox' => $inbox]);
+
+        return view('dashboard.folderpesan.inbox', ['messages' => $messages]);
     }
     public function readmessage(Request $request, $message_id)
     {

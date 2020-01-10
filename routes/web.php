@@ -17,6 +17,9 @@ Route::get('/sparepart-truck', 'homepageController@shop2');
 Route::get('/ajax-product/{itemId}', 'homepageController@quickview');
 Route::get('/dapatkan-penawaran/{itemId}', 'homepageController@penawaran');
 Route::post('/kirim-penawaran', 'homepageController@kirimpenawaran');
+Route::post('/kirimpesan', 'homepageController@kirimpesan');
+Route::get('/about', 'homepageController@about');
+Route::get('/contact', 'homepageController@contact');
 
 // DASHBOARD
 Route::get('/tools', 'homepageController@tools')->name('signin');
