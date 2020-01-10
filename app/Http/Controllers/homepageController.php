@@ -44,6 +44,19 @@ class homepageController extends Controller
             ->get();
         return view('homepage.viewitem', ['item' => $item, 'itemkategori' => $itemkategori, 'kategori' => $kategori]);
     }
+    public function penawaran($itemId)
+    {
+        $item = itemModel::find($itemId);
+        $itemkategori = DB::table('items')
+            ->where('items.itemId', '=', $itemId)
+            ->join('categoriesSparepart', 'categoriesSparepart.id', '=', 'items.kategori_id')
+            ->select('items.*', 'categoriesSparepart.*')
+            ->get();
+        $kategori = DB::table('categoriesSparepart')
+            ->select('categoriesSparepart.*')
+            ->get();
+        return view('homepage.penawaran', ['item' => $item, 'itemkategori' => $itemkategori, 'kategori' => $kategori]);
+    }
     public function tools()
     {
         return view('authen.login');
