@@ -4,8 +4,7 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="carousel" data-items="1">
-                        <img src="{!!asset('storage/shop/img/'.$item->images)!!}" alt="Shop product image!">
-                        <img src="{!!asset('storage/shop/img/'.$item->images)!!}" alt="Shop product image!">
+                        <img src="{!!asset('storage/shop/img/'.$item->images)!!}" alt="{{$item->nama_item}}">
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -39,8 +38,7 @@
                     </div> --}}
                     <div class="m-t-20">
                         <a href="/dapatkan-penawaran/{{$item->itemId}}" class="btn btn-lg"><i
-                                class="fas fa-luggage-cart"></i> PESAN
-                            SEKARANG</a>
+                                class="fas fa-luggage-cart"></i> DAPATKAN PENAWARAN</a>
                     </div>
                 </div>
             </div>

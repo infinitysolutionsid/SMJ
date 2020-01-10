@@ -19,8 +19,8 @@
                 <p>Produk: <strong>{{$item->nama_item}}</strong><br>
                     Deskripsi produk: {{$item->description}}</p>
                 <div class="m-t-30">
-                    <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form"
-                        method="post">
+                    <form action="/kirim-penawaran" method="post">
+                        @csrf
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <label for="name">Name</label>
@@ -35,45 +35,44 @@
                         </div>
                         <div class="row">
                             <div class="form-group col-md-12">
+                                <label for="nohp">No Telepon/HP</label>
+                                <input type="text" name="nohp" class="form-control"
+                                    placeholder="Masukkan nomor aktif yang bisa dihubungi">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
                                 <label for="subject">Saya tertarik produk</label>
                                 <input type="text" name="widget-contact-form-subject" disabled
                                     class="form-control required" value="{{$item->nama_item}}">
                             </div>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <label for="">Catatan</label>
-                            <textarea name="notes" id="" cols="30" rows="6"></textarea>
+                            <div class="form-group col-md-12">
+                                <label for="">Catatan</label>
+                                <textarea name="notes" class="form-control" placeholder="Masukkan catatan penting kamu"
+                                    cols="30" rows="6"></textarea>
+                            </div>
                         </div>
 
-                        <button class="btn" type="submit" id="form-submit"><i class="fa fa-paper-plane"></i>&nbsp;Send
-                            message</button>
+
+                        <button class="btn" type="submit" id="form-submit"><i class="fa fa-paper-plane"></i>&nbsp;KIRIM
+                            PENAWARAN</button>
                     </form>
                 </div>
             </div>
             <div class="col-lg-6">
-                <h3 class="text-uppercase">Address & Map</h3>
+                <h3 class="text-uppercase">Review Produk</h3>
                 <div class="row">
-                    <div class="col-lg-6">
-                        <address>
-                            <strong>Polo, Inc.</strong><br>
-                            795 Folsom Ave, Suite 600<br>
-                            San Francisco, CA 94107<br>
-                            <abbr title="Phone">P:</h4> (123) 456-7890
-                        </address>
+                    <div class="col-lg-4">
+                        <img src="{!!asset('storage/shop/img/'.$item->images)!!}" alt="{{$item->nama_item}}">
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-8 text-left">
                         <address>
-                            <strong>Polo Office</strong><br>
-                            795 Folsom Ave, Suite 600<br>
-                            San Francisco, CA 94107<br>
-                            <abbr title="Phone">P:</h4> (123) 456-7890
+                            <strong>{{$item->nama_item}}</strong><br>
+                            {{$item->type_product}}<br><br>
+                            {{$item->description}}<br>
                         </address>
                     </div>
                 </div>
-
-                <div class="map" data-latitude="-37.817240" data-longitude="144.955826" data-style="light"
-                    data-info="Hello from &lt;br&gt; Inspiro Themes"></div>
-
             </div>
         </div>
     </div>
