@@ -75,6 +75,7 @@ class homepageController extends Controller
         $pesan->subject = 'Saya tertarik dengan produk ' . $request->subject;
         $pesan->messages = $request->notes;
         $pesan->logIP = $request->getClientIp();
+        $pesan->status = 'unread';
 
         $pesan->save();
         return redirect('/')->with('sukses', 'Penawaran kamu berhasil kami terima. Kami akan menghubungi kamu dalam waktu 1x24 jam. Jika belum menerima email/panggilan telepon, kamu boleh mengirim pesan ke email info@sumberparts.com. Terima kasih.');

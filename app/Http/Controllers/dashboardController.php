@@ -32,7 +32,18 @@ class dashboardController extends Controller
         $messages = DB::table('messages')
             ->select('messages.*')
             ->paginate(30);
-        return view('dashboard.messages', ['messages' => $messages]);
+        $inbox = DB::table('messages')
+            ->where('status', '=', 'unread')
+            ->select('messages.*')
+            ->get();
+        return view('dashboard.folderpesan.inbox', ['messages' => $messages, 'inbox' => $inbox]);
+    }
+    public function readmessage(Request $request, $message_id)
+    {
+        $pesanmasuk = \App\MessagesModel::find($message_id);
+        $pesanmasuk->status = 'readed';
+        $pesanmasuk->save();
+        return view('dashboard.folderpesan.read', ['pesanmasuk' => $pesanmasuk]);
     }
     public function kategoriadd(Request $request)
     {

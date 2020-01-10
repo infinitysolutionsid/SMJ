@@ -26,6 +26,7 @@ Route::get('/utility-item', 'dashboardController@utility');
 Route::post('/tambah-data-kategori', 'dashboardController@kategoriadd');
 Route::post('/tambah-data-item', 'dashboardController@itemadd');
 Route::get('/messages', 'dashboardController@messages');
+Route::get('/messages/read/{message_id}', 'dashboardController@readmessage');
 // VIEW EDIT FORM
 Route::get('/update-kategori/{id}', 'dashboardController@updatekategori');
 Route::get('/delete-kategori/{id}', 'dashboardController@deletekategori');
