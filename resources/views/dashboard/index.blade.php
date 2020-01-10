@@ -96,7 +96,7 @@
                             class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">{{Auth()->user()->name}}</a>
+                        {{-- <a href="#" class="d-block">{{Auth()->user()->name}}</a> --}}
                     </div>
                 </div>
 
@@ -115,7 +115,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/user-config" class="nav-link @yield('aktifdash')">
+                            <a href="/user-config" class="nav-link @yield('aktifuser')">
                                 <i class="nav-icon fas fa-users-cog"></i>
                                 <p>
                                     User System Management

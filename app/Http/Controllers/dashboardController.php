@@ -36,6 +36,13 @@ class dashboardController extends Controller
 
         return view('dashboard.folderpesan.inbox', ['messages' => $messages]);
     }
+    public function userconf()
+    {
+        $userdata = DB::table('users')
+            ->select('users.*')
+            ->get();
+        return view('dashboard.userconf', ['userdata' => $userdata]);
+    }
     public function readmessage(Request $request, $message_id)
     {
         $pesanmasuk = \App\MessagesModel::find($message_id);
