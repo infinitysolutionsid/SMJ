@@ -114,7 +114,14 @@
                                 </p>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a href="/user-config" class="nav-link @yield('aktifdash')">
+                                <i class="nav-icon fas fa-users-cog"></i>
+                                <p>
+                                    User System Management
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-header">SYSTEM</li>
                         <li class="nav-item">
                             <a href="/utility-item" class="nav-link @yield('aktifutility')">
