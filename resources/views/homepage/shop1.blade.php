@@ -29,7 +29,7 @@
             <div class="content col-lg-9">
                 <div class="row m-b-20">
                     <div class="col-lg-6 p-t-10 m-b-20">
-                        <h3 class="m-b-20">Sparepart Truck</h3>
+                        <h3 class="m-b-20">Hydraulic Dump Truck</h3>
                         <p>Lorem ipsum dolor sit amet. Accusamus, sit, exercitationem, consequuntur, assumenda iusto eos
                             commodi alias.</p>
                     </div>
@@ -37,27 +37,29 @@
 
                 <div class="shop">
                     <div class="grid-layout grid-3-columns" data-item="grid-item">
+                        @foreach ($itemkategori as $itemdata)
                         <div class="grid-item">
                             <div class="product">
                                 <div class="product-image">
                                     <a href="#"><img alt="Shop product image!"
-                                            src="{!!asset('storage/shop/hydraulic/hy-1.jpg')!!}">
+                                            src="{!!asset('storage/shop/img/'.$itemdata->images)!!}">
                                     </a>
                                     <a href="#"><img alt="Shop product image!"
-                                            src="{!!asset('storage/shop/hydraulic/hy-1.jpg')!!}">
+                                            src="{!!asset('storage/shop/img/'.$itemdata->images)!!}">
                                     </a>
                                     <span class="product-new">NEW</span>
                                     <span class="product-wishlist">
                                         <a href="#"><i class="fa fa-heart"></i></a>
                                     </span>
                                     <div class="product-overlay">
-                                        <a href="/ajax-product" data-lightbox="ajax">Quick View</a>
+                                        <a href="/ajax-product/{{$itemdata->itemId}}" data-lightbox="ajax">Quick
+                                            View</a>
                                     </div>
                                 </div>
                                 <div class="product-description">
-                                    <div class="product-category">Hydraulic Dump Truck Sparepart</div>
+                                    <div class="product-category">{{$itemdata->type_product}}</div>
                                     <div class="product-title">
-                                        <h3><a href="#">Sparepart #1</a></h3>
+                                        <h3><a href="#">{{$itemdata->nama_item}}</a></h3>
                                     </div>
                                     <div class="product-price"><ins></ins>
                                     </div>
@@ -68,163 +70,18 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-half-o"></i>
                                     </div>
-                                    <div class="product-reviews"><a href="#">6 customer reviews</a>
+                                    <div class="product-reviews"><a
+                                            href="#">@if($itemdata->kategori_id){{$itemdata->nama_kategori}}@endif</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="grid-item">
-                            <div class="product">
-                                <div class="product-image">
-                                    <a href="#"><img alt="Shop product image!"
-                                            src="{!!asset('storage/shop/hydraulic/hy-2.jpg')!!}">
-                                    </a>
-                                    <a href="#"><img alt="Shop product image!"
-                                            src="{!!asset('storage/shop/hydraulic/hy-2.jpg')!!}">
-                                    </a>
-                                    <span class="product-wishlist">
-                                        <a href="#"><i class="fa fa-heart"></i></a>
-                                    </span>
-                                    <div class="product-overlay">
-                                        <a href="/ajax-product" data-lightbox="ajax">Quick View</a>
-                                    </div>
-                                </div>
-                                <div class="product-description">
-                                    <div class="product-category">Hydraulic Dump Truck Sparepart</div>
-                                    <div class="product-title">
-                                        <h3><a href="#">Sparepart #2</a></h3>
-                                    </div>
-                                    <div class="product-price"><ins></ins>
-                                    </div>
-                                    <div class="product-rate">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-half-o"></i>
-                                    </div>
-                                    <div class="product-reviews"><a href="#">3 customer reviews</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="product">
-                                <div class="product-image">
-                                    <a href="#"><img alt="Shop product image!"
-                                            src="{!!asset('storage/shop/hydraulic/hy-3.jpg')!!}">
-                                    </a>
-                                    <a href="#"><img alt="Shop product image!"
-                                            src="{!!asset('storage/shop/hydraulic/hy-3.jpg')!!}">
-                                    </a>
-                                    <span class="product-hot">HOT</span>
-                                    <span class="product-wishlist">
-                                        <a href="#"><i class="fa fa-heart"></i></a>
-                                    </span>
-                                    <div class="product-overlay">
-                                        <a href="/ajax-product" data-lightbox="ajax">Quick View</a>
-                                    </div>
-                                </div>
-                                <div class="product-description">
-                                    <div class="product-category">Hydraulic Dump Truck Sparepart</div>
-                                    <div class="product-title">
-                                        <h3><a href="#">Sparepart #3</a></h3>
-                                    </div>
-                                    <div class="product-price"><ins></ins>
-                                    </div>
-                                    <div class="product-rate">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-half-o"></i>
-                                    </div>
-                                    <div class="product-reviews"><a href="#">3 customer reviews</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="product">
-                                <div class="product-image">
-                                    <a href="#"><img alt="Shop product image!"
-                                            src="{!!asset('storage/shop/hydraulic/hy-4.jpg')!!}">
-                                    </a>
-                                    <a href="#"><img alt="Shop product image!"
-                                            src="{!!asset('storage/shop/hydraulic/hy-4.jpg')!!}">
-                                    </a>
-                                    <span class="product-wishlist">
-                                        <a href="#"><i class="fa fa-heart"></i></a>
-                                    </span>
-                                    <div class="product-overlay">
-                                        <a href="/ajax-product" data-lightbox="ajax">Quick View</a>
-                                    </div>
-                                </div>
-                                <div class="product-description">
-                                    <div class="product-category">Hydraulic Dump Truck Sparepart</div>
-                                    <div class="product-title">
-                                        <h3><a href="#">Sparepart #4</a></h3>
-                                    </div>
-                                    <div class="product-price"><ins></ins>
-                                    </div>
-                                    <div class="product-rate">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-half-o"></i>
-                                    </div>
-                                    <div class="product-reviews"><a href="#">5 customer reviews</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="product">
-                                <div class="product-image">
-                                    <a href="#"><img alt="Shop product image!"
-                                            src="{!!asset('storage/shop/hydraulic/hy-5.jpg')!!}">
-                                    </a>
-                                    <a href="#"><img alt="Shop product image!"
-                                            src="{!!asset('storage/shop/hydraulic/hy-5.jpg')!!}">
-                                    </a>
-                                    <span class="product-wishlist">
-                                        <a href="#"><i class="fa fa-heart"></i></a>
-                                    </span>
-                                    <div class="product-overlay">
-                                        <a href="/ajax-product" data-lightbox="ajax">Quick View</a>
-                                    </div>
-                                </div>
-                                <div class="product-description">
-                                    <div class="product-category">Hydraulic Dump Truck Sparepart</div>
-                                    <div class="product-title">
-                                        <h3><a href="#">Sparepart #4</a></h3>
-                                    </div>
-                                    <div class="product-price"><ins></ins>
-                                    </div>
-                                    <div class="product-rate">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-o"></i>
-                                    </div>
-                                    <div class="product-reviews"><a href="#">5 customer reviews</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <hr>
 
                     <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-left"></i></a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-right"></i></a></li>
+                        {{$itemkategori->links()}}
                     </ul>
 
                 </div>
@@ -243,7 +100,7 @@
                     </ul>
                 </div>
 
-                <div class="widget widget-tags">
+                {{-- <div class="widget widget-tags">
                     <h4 class="widget-title">Tags</h4>
                     <div class="tags">
                         <a href="#">Design</a>
@@ -257,7 +114,7 @@
                         <a href="#">CSS3</a>
                         <a href="#">jQuery</a>
                     </div>
-                </div>
+                </div> --}}
 
 
             </div>

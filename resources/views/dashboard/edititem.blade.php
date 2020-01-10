@@ -1,5 +1,5 @@
 @extends('dashboard.index')
-@section('title','Edit item produk'.$item->nama_item)
+@section('title','Edit item produk '.$item->nama_item)
 @section('content')
 <div class="card card-primary">
     <div class="card-header">

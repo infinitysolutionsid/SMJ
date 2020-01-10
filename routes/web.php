@@ -14,7 +14,8 @@
 Route::get('/', 'homepageController@index');
 Route::get('/hydraulic-dump-truck', 'homepageController@shop1');
 Route::get('/sparepart-truck', 'homepageController@shop2');
-Route::get('/ajax-product', 'homepageController@quickview');
+Route::get('/ajax-product/{itemId}', 'homepageController@quickview');
+Route::get('/dapatkan-penawaran/{itemId}', 'homepageController@penawaran');
 
 // DASHBOARD
 Route::get('/tools', 'homepageController@tools')->name('signin');
