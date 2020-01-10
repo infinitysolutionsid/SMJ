@@ -16,7 +16,11 @@
                 <div class="form-group col-md-3">
                     <label for="">Jenis produk</label>
                     <select name="type_product" class="custom-select" id="">
-                        <option value="@if($item->type_product=='Hydraulic Dump Truck')Hydraulic Dump Truck @elseif(">Hydraulic Dump Truck</option>
+                        <option value="@if($item->type_product=='Hydraulic Dump Truck')Hydraulic Dump Truck
+                            @elseif($item->type_product=='Sparepart Truck')Sparepart Truck @else Lain lain">
+                            @if($item->type_product=='Hydraulic Dump Truck')Hydraulic Dump Truck
+                            @elseif($item->type_product=='Sparepart Truck')Sparepart Truck @else Lain lain"
+                        </option>
                     </select>
                 </div>
                 <div class="form-group col-md-3">

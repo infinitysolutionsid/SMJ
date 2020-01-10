@@ -188,6 +188,7 @@
                 <tr>
                     <th width="10px">No.</th>
                     <th>Nama produk</th>
+                    <th>Jenis</th>
                     <th>Kategori</th>
                     <th>Gambar</th>
                     <th>Action</th>
@@ -200,6 +201,7 @@
                     <td>{{$i++}}</td>
                     <td>{{$kategori_item->nama_item}}
                     </td>
+                    <td>{{$kategori_item->type_product}}</td>
                     <td>@if($kategori_item->kategori_id){{$kategori_item->nama_kategori}}@endif</td>
                     <td><a href="{!!asset('storage/shop/img/'.$kategori_item->images)!!}" target="_blank">Open image
                             on a new tab</a></td>
@@ -218,6 +220,7 @@
                 <tr>
                     <th>No.</th>
                     <th>Nama produk</th>
+                    <th>Jenis</th>
                     <th>Kategori</th>
                     <th>Gambar</th>
                     <th>Action</th>
