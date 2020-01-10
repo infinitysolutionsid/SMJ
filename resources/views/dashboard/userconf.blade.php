@@ -5,7 +5,7 @@
 <!-- Default box -->
 <div class="card card-primary">
     <div class="card-header">
-        <h3 class="card-title">Category</h3>
+        <h3 class="card-title">User configuration</h3>
 
         <div class="card-tools">
             <a href="" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#tambahkategori">
@@ -94,7 +94,10 @@
             <tfoot>
                 <tr>
                     <th>No.</th>
-                    <th>Kategori</th>
+                    <th>Nama Lengkap</th>
+                    <th>Username</th>
+                    <th>Status</th>
+                    <th>Role</th>
                     <th>Action</th>
                 </tr>
             </tfoot>
