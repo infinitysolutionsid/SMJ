@@ -20,6 +20,7 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- DataTables -->
+    <link rel="stylesheet" href="{!!asset('dashboard_admin/dist/css/customstyle.css')!!}">
     <link rel="stylesheet" href="{!!asset('dashboard_admin/plugins/datatables-bs4/css/dataTables.bootstrap4.css')!!}">
 </head>
 

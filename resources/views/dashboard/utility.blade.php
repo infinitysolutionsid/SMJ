@@ -74,7 +74,8 @@
                     <td>{{$i++}}</td>
                     <td>{{$kategori_item->nama_kategori}}
                     </td>
-                    <td><a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a> <a href="#"
+                    <td><a href="/delete-kategori/{{$kategori_item->id}}" class="btn btn-danger btn-sm"><i
+                                class="fas fa-trash"></i></a> <a href="/update-kategori/{{$kategori_item->id}}"
                             class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a></td>
                 </tr>
                 @endforeach
@@ -129,7 +130,16 @@
                                     <input type="text" name="nama_item" id="nama_item" class="form-control"
                                         placeholder="Masukkan nama produk" autofocus required>
                                 </div>
-                                <div class="form-group col-md-6" style="color: #000 !important;">
+                                <div class="form-group col-md-3" style="color: #000 !important;">
+                                    <label for="type_product">Jenis produk</label>
+                                    <select name="type_product" id="" class="custom-select" required>
+                                        <option value="" selected>Pilih jenis</option>
+                                        <option value="Hydraulic Dump Truck">Hydraulic Dump Truck</option>
+                                        <option value="Sparepart Truck">Sparepart Truck</option>
+                                        <option value="Lain lain">Lain lain</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3" style="color: #000 !important;">
                                     <label for="kategori">Kategori</label>
                                     <select name="kategori_id" id="" class="custom-select" required>
                                         <option value="" selected>Pilih kategori</option>
@@ -193,7 +203,8 @@
                     <td>@if($kategori_item->kategori_id){{$kategori_item->nama_kategori}}@endif</td>
                     <td><a href="{!!asset('storage/shop/img/'.$kategori_item->images)!!}" target="_blank">Open image
                             on a new tab</a></td>
-                    <td><a href="#" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a> <a href="#"
+                    <td><a href="/delete-item/{{$kategori_item->itemId}}" class="btn btn-danger btn-sm"><i
+                                class="fas fa-trash"></i></a> <a href="/update-item/{{$kategori_item->itemId}}"
                             class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a></td>
                 </tr>
                 @endforeach

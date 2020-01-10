@@ -23,3 +23,11 @@ Route::get('/dashboard', 'dashboardController@index');
 Route::get('/utility-item', 'dashboardController@utility');
 Route::post('/tambah-data-kategori', 'dashboardController@kategoriadd');
 Route::post('/tambah-data-item', 'dashboardController@itemadd');
+// VIEW EDIT FORM
+Route::get('/update-kategori/{id}', 'dashboardController@updatekategori');
+Route::get('/delete-kategori/{id}', 'dashboardController@deletekategori');
+Route::get('/update-item/{id}', 'dashboardController@updateitem');
+Route::get('/delete-item/{id}', 'dashboardController@deleteitem');
+// PROSES EDIT FORM
+Route::post('/proses-kategori/{id}', 'dashboardController@prosesupdatekategori');
+Route::post('/proses-item/{itemId}', 'dashboardController@prosesupdateitem');
