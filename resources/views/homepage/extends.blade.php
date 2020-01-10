@@ -8,7 +8,7 @@
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="Bintang j Tobing" />
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="{!!asset('storage/img/icon.png')!!}">
     <title>CV. Sumber Mitra Sejati @yield('title')</title>
 
     <link href="{!!asset('css/plugins.css')!!}" rel="stylesheet">

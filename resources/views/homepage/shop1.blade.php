@@ -37,48 +37,51 @@
 
                 <div class="shop">
                     <div class="grid-layout grid-3-columns" data-item="grid-item">
-                        @foreach ($itemkategori as $itemdata)
-                        <div class="grid-item">
-                            <div class="product">
-                                <div class="product-image">
-                                    <a href="/ajax-product/{{$itemdata->itemId}}" data-lightbox="ajax"><img
-                                            alt="Shop product image!"
-                                            src="{!!asset('storage/shop/img/'.$itemdata->images)!!}">
-                                    </a>
-                                    <a href="/ajax-product/{{$itemdata->itemId}}" data-lightbox="ajax"><img
-                                            alt="Shop product image!"
-                                            src="{!!asset('storage/shop/img/'.$itemdata->images)!!}">
-                                    </a>
-                                    <span class="product-new">NEW</span>
-                                    <span class="product-wishlist">
-                                        <a href="#"><i class="fa fa-heart"></i></a>
-                                    </span>
-                                    <div class="product-overlay">
-                                        <a href="/ajax-product/{{$itemdata->itemId}}" data-lightbox="ajax">Quick
-                                            View</a>
+                        @if($itemkategori->count()<1) <p>No data founded</p>
+                            @else
+                            @foreach ($itemkategori as $itemdata)
+                            <div class="grid-item">
+                                <div class="product">
+                                    <div class="product-image">
+                                        <a href="/ajax-product/{{$itemdata->itemId}}" data-lightbox="ajax"><img
+                                                alt="Shop product image!"
+                                                src="{!!asset('storage/shop/img/'.$itemdata->images)!!}">
+                                        </a>
+                                        <a href="/ajax-product/{{$itemdata->itemId}}" data-lightbox="ajax"><img
+                                                alt="Shop product image!"
+                                                src="{!!asset('storage/shop/img/'.$itemdata->images)!!}">
+                                        </a>
+                                        <span class="product-new">NEW</span>
+                                        <span class="product-wishlist">
+                                            <a href="#"><i class="fa fa-heart"></i></a>
+                                        </span>
+                                        <div class="product-overlay">
+                                            <a href="/ajax-product/{{$itemdata->itemId}}" data-lightbox="ajax">Quick
+                                                View</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="product-description">
-                                    <div class="product-category">{{$itemdata->type_product}}</div>
-                                    <div class="product-title">
-                                        <h3><a href="#">{{$itemdata->nama_item}}</a></h3>
-                                    </div>
-                                    <div class="product-price"><ins></ins>
-                                    </div>
-                                    <div class="product-rate">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star-half-o"></i>
-                                    </div>
-                                    <div class="product-reviews"><a
-                                            href="#">@if($itemdata->kategori_id){{$itemdata->nama_kategori}}@endif</a>
+                                    <div class="product-description">
+                                        <div class="product-category">{{$itemdata->type_product}}</div>
+                                        <div class="product-title">
+                                            <h3><a href="#">{{$itemdata->nama_item}}</a></h3>
+                                        </div>
+                                        <div class="product-price"><ins></ins>
+                                        </div>
+                                        <div class="product-rate">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </div>
+                                        <div class="product-reviews"><a
+                                                href="#">@if($itemdata->kategori_id){{$itemdata->nama_kategori}}@endif</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        @endforeach
+                            @endforeach
+                            @endif
                     </div>
                     <hr>
 

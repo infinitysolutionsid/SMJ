@@ -62,10 +62,7 @@ class homepageController extends Controller
             ->get();
         return view('homepage.penawaran', ['item' => $item, 'itemkategori' => $itemkategori, 'kategori' => $kategori]);
     }
-    public function tools()
-    {
-        return view('authen.login');
-    }
+
     public function kirimpenawaran(Request $request)
     {
         $pesan = new \App\MessagesModel;

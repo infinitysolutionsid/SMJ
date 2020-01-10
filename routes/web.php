@@ -21,20 +21,26 @@ Route::post('/kirimpesan', 'homepageController@kirimpesan');
 Route::get('/about', 'homepageController@about');
 Route::get('/contact', 'homepageController@contact');
 
-// DASHBOARD
-Route::get('/tools', 'homepageController@tools')->name('signin');
+// DASHBOARD LOGIN
+Route::get('/tools', 'AuthenController@tools')->name('signin');
+Route::post('/proses-login', 'AuthenController@auth');
+Route::get('logout', 'AuthenController@logout');
+
 // NEED AUTH
-Route::get('/dashboard', 'dashboardController@index');
-Route::get('/utility-item', 'dashboardController@utility');
-Route::post('/tambah-data-kategori', 'dashboardController@kategoriadd');
-Route::post('/tambah-data-item', 'dashboardController@itemadd');
-Route::get('/messages', 'dashboardController@messages');
-Route::get('/messages/read/{message_id}', 'dashboardController@readmessage');
-// VIEW EDIT FORM
-Route::get('/update-kategori/{id}', 'dashboardController@updatekategori');
-Route::get('/delete-kategori/{id}', 'dashboardController@deletekategori');
-Route::get('/update-item/{id}', 'dashboardController@updateitem');
-Route::get('/delete-item/{id}', 'dashboardController@deleteitem');
-// PROSES EDIT FORM
-Route::post('/proses-kategori/{id}', 'dashboardController@prosesupdatekategori');
-Route::post('/proses-item/{itemId}', 'dashboardController@prosesupdateitem');
+// DASHBOARD
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', 'dashboardController@index');
+    Route::get('/utility-item', 'dashboardController@utility');
+    Route::post('/tambah-data-kategori', 'dashboardController@kategoriadd');
+    Route::post('/tambah-data-item', 'dashboardController@itemadd');
+    Route::get('/messages', 'dashboardController@messages');
+    Route::get('/messages/read/{message_id}', 'dashboardController@readmessage');
+    // VIEW EDIT FORM
+    Route::get('/update-kategori/{id}', 'dashboardController@updatekategori');
+    Route::get('/delete-kategori/{id}', 'dashboardController@deletekategori');
+    Route::get('/update-item/{id}', 'dashboardController@updateitem');
+    Route::get('/delete-item/{id}', 'dashboardController@deleteitem');
+    // PROSES EDIT FORM
+    Route::post('/proses-kategori/{id}', 'dashboardController@prosesupdatekategori');
+    Route::post('/proses-item/{itemId}', 'dashboardController@prosesupdateitem');
+});

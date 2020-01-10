@@ -31,7 +31,8 @@
                 <div class="login100-pic js-tilt" data-tilt>
                     <img src="{!!asset('authen/img/img-01.webp')!!}" alt="IMG">
                 </div>
-                <form class="login100-form validate-form">
+                <form action="/proses-login" method="POST">
+                    @csrf
                     <span class="login100-form-title">
                         Member Login
                     </span>
@@ -43,7 +44,7 @@
                         </span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="pass" placeholder="Password">
+                        <input class="input100" type="password" name="password" placeholder="Password">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock" aria-hidden="true"></i>

@@ -23,7 +23,8 @@
             <div class="mailbox-controls">
                 <!-- Check all button -->
                 <!-- /.btn-group -->
-                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
+                <a href="javascript:window.location.reload(true)" class="btn btn-default btn-sm"><i
+                        class="fas fa-sync-alt"></i></a>
                 <div class="float-right">
                     {{$messages->links()}}
                     <div class="btn-group">
@@ -67,7 +68,8 @@
             <div class="mailbox-controls">
 
                 <!-- /.btn-group -->
-                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
+                <a href="javascript:window.location.reload(true)" class="btn btn-default btn-sm"><i
+                        class="fas fa-sync-alt"></i></a>
                 <div class="float-right">
                     {{$messages->links()}}
                     <div class="btn-group">

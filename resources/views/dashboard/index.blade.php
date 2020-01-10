@@ -13,6 +13,7 @@
     <!-- overlayScrollbars -->
     <link rel="stylesheet"
         href="{!!asset('dashboard_admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')!!}">
+    <link rel="icon" type="image/png" href="{!!asset('storage/img/icon.png')!!}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{!!asset('dashboard_admin/dist/css/adminlte.min.css')!!}">
     <!-- Google Font: Source Sans Pro -->
