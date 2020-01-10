@@ -1,5 +1,6 @@
 @extends('dashboard.index')
 @section('title','Dashboard')
+@section('aktifdash','active')
 @section('content')
 <div class="container-fluid">
     <!-- Info boxes -->

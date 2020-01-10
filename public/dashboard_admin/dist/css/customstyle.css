@@ -2,3 +2,16 @@
     width: 120px;
     height: auto;
 }
+
+.gambardipenawaran {
+    width: 160px;
+    height: auto;
+}
+
+.linkpesan {
+    color: #2c2c2c;
+}
+
+.linkpesan:hover {
+    color: #000 !important;
+}

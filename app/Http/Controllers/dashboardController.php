@@ -27,6 +27,13 @@ class dashboardController extends Controller
             ->get();
         return view('dashboard.utility', ['kategori' => $kategori, 'item' => $item, 'itemkategori' => $itemkategori]);
     }
+    public function messages()
+    {
+        $messages = DB::table('messages')
+            ->select('messages.*')
+            ->paginate(30);
+        return view('dashboard.messages', ['messages' => $messages]);
+    }
     public function kategoriadd(Request $request)
     {
         $kategori = new \App\CategoriesModel;

@@ -26,10 +26,15 @@ class homepageController extends Controller
     }
     public function shop2()
     {
+        $itemkategori = DB::table('items')
+            ->where('items.type_product', '=', 'Sparepart Truck')
+            ->join('categoriesSparepart', 'categoriesSparepart.id', '=', 'items.kategori_id')
+            ->select('items.*', 'categoriesSparepart.*')
+            ->paginate(12);
         $kategori = DB::table('categoriesSparepart')
             ->select('categoriesSparepart.*')
             ->get();
-        return view('homepage.shop2', ['kategori' => $kategori]);
+        return view('homepage.shop2', ['kategori' => $kategori, 'itemkategori' => $itemkategori]);
     }
     public function quickview($itemId)
     {
@@ -60,5 +65,18 @@ class homepageController extends Controller
     public function tools()
     {
         return view('authen.login');
+    }
+    public function kirimpenawaran(Request $request)
+    {
+        $pesan = new \App\MessagesModel;
+        $pesan->nama = $request->nama;
+        $pesan->email = $request->email;
+        $pesan->nohp = $request->nohp;
+        $pesan->subject = 'Saya tertarik dengan produk ' . $request->subject;
+        $pesan->messages = $request->notes;
+        $pesan->logIP = $request->getClientIp();
+
+        $pesan->save();
+        return redirect('/')->with('sukses', 'Penawaran kamu berhasil kami terima. Kami akan menghubungi kamu dalam waktu 1x24 jam. Jika belum menerima email/panggilan telepon, kamu boleh mengirim pesan ke email info@sumberparts.com. Terima kasih.');
     }
 }

@@ -15,6 +15,7 @@
     <link href="{!!asset('css/style.css')!!}" rel="stylesheet">
     <link rel="stylesheet" href="{!!asset('fontawesome/css/all.min.css')!!}">
     <link rel="stylesheet" href="{!!asset('fontawesome/css/fontawesome.css')!!}">
+    <link rel="stylesheet" href="{!!asset('dashboard_admin/dist/css/customstyle.css')!!}">
 
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,800,700,600%7CRaleway:100,300,600,700,800"
         rel="stylesheet" type="text/css" />
@@ -51,7 +52,7 @@
             <div class="header-inner">
                 <div class="container">
 
-                    <img src="{!!asset('storage/logo.png')!!}" class="imglogosmj" alt="logo smj">
+                    <a href="/"><img src="{!!asset('storage/logo.png')!!}" class="imglogosmj" alt="logo smj"></a>
                     <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> </div>
 
                     <div id="mainMenu">

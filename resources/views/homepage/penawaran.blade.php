@@ -36,15 +36,15 @@
                         <div class="row">
                             <div class="form-group col-md-12">
                                 <label for="nohp">No Telepon/HP</label>
-                                <input type="text" name="nohp" class="form-control"
+                                <input type="text" name="nohp" required class="form-control"
                                     placeholder="Masukkan nomor aktif yang bisa dihubungi">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-md-12">
                                 <label for="subject">Saya tertarik produk</label>
-                                <input type="text" name="widget-contact-form-subject" disabled
-                                    class="form-control required" value="{{$item->nama_item}}">
+                                <input type="text" name="subject" readonly class="form-control required"
+                                    value="{{$item->nama_item}}">
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="">Catatan</label>
@@ -63,7 +63,8 @@
                 <h3 class="text-uppercase">Review Produk</h3>
                 <div class="row">
                     <div class="col-lg-4">
-                        <img src="{!!asset('storage/shop/img/'.$item->images)!!}" alt="{{$item->nama_item}}">
+                        <img src="{!!asset('storage/shop/img/'.$item->images)!!}" alt="{{$item->nama_item}}"
+                            class="gambardipenawaran">
                     </div>
                     <div class="col-lg-8 text-left">
                         <address>

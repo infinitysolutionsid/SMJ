@@ -3,6 +3,14 @@
 @section('keywords','sumber diesel, sumber parts, supplier sparepart truck, sparepart truck, truck, sparepart')
 @section('desc','Sumberparts.com adalah website toko dari toko CV. Sumber Diesel.')
 @section('content')
+@if(session('sukses'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Berhasil!</strong> {{session('sukses')}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+@endif
 <div id="slider" class="inspiro-slider" data-height-xs="360">
 
     <div class="slide" style="background-image:url('{!!asset('storage/img/truck-1-cover.jpg')!!}');">

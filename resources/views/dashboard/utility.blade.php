@@ -1,5 +1,6 @@
 @extends('dashboard.index')
 @section('title','Utility Item')
+@section('aktifutility','active')
 @section('content')
 <!-- Default box -->
 <div class="card card-primary">

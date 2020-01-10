@@ -41,10 +41,12 @@
                         <div class="grid-item">
                             <div class="product">
                                 <div class="product-image">
-                                    <a href="#"><img alt="Shop product image!"
+                                    <a href="/ajax-product/{{$itemdata->itemId}}" data-lightbox="ajax"><img
+                                            alt="Shop product image!"
                                             src="{!!asset('storage/shop/img/'.$itemdata->images)!!}">
                                     </a>
-                                    <a href="#"><img alt="Shop product image!"
+                                    <a href="/ajax-product/{{$itemdata->itemId}}" data-lightbox="ajax"><img
+                                            alt="Shop product image!"
                                             src="{!!asset('storage/shop/img/'.$itemdata->images)!!}">
                                     </a>
                                     <span class="product-new">NEW</span>

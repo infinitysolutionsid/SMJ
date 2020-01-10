@@ -34,10 +34,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="/" class="nav-link">Homepage</a>
                 </li>
             </ul>
 
@@ -180,9 +177,9 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+            with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="/dashboard" class="nav-link active">
+                            <a href="/dashboard" class="nav-link @yield('aktifdash')">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -192,10 +189,19 @@
 
                         <li class="nav-header">SYSTEM</li>
                         <li class="nav-item">
-                            <a href="/utility-item" class="nav-link">
+                            <a href="/utility-item" class="nav-link @yield('aktifutility')">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Utility Item
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/messages" class="nav-link @yield('aktifmessages')">
+                                <i class="nav-icon fas fa-inbox"></i>
+                                <p>
+                                    Messages
+                                    <span class="badge badge-info right">0</span>
                                 </p>
                             </a>
                         </li>
