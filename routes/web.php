@@ -25,6 +25,7 @@ Route::get('/contact', 'homepageController@contact');
 Route::get('/tools', 'AuthenController@tools')->name('signin');
 Route::post('/proses-login', 'AuthenController@auth');
 Route::get('logout', 'AuthenController@logout');
+Route::post('/registrasiproses', 'AuthenController@registrasi');
 
 // NEED AUTH
 // DASHBOARD
