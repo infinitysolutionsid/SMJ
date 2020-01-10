@@ -54,10 +54,25 @@
 
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="/logout" class="nav-link">
                         <i class="fas fa-power-off"></i> Logout
                     </a>
+                </li> --}}
+                <li class="nav-item dropdown">
+                    <a href="#" data-toggle="dropdown" class="nav-link">
+                        <img src="{!!asset('dashboard_admin/dist/img/user2-160x160.jpg')!!}"
+                            class="img-circle elevation-2 gambardrop" alt="User Image">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-user mr-2"></i> Pengaturan profil
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/logout" class="dropdown-item">
+                            <i class="fas fa-power-off mr-2"></i> Logout
+                        </a>
+                    </div>
                 </li>
             </ul>
         </nav>
