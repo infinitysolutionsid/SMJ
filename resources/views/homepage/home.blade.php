@@ -13,7 +13,7 @@
 @endif
 <div id="slider" class="inspiro-slider" data-height-xs="360">
 
-    <div class="slide" style="background-image:url('{!!asset('storage/img/truck-1-cover.jpg')!!}');">
+    <div class="slide" style="background-image:url('{!!asset('storage/img/fusohns.jpg')!!}');">
         <div class="container">
             <div class="slide-captions text-left text-light">
 
@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div class="slide" style="background-image:url('{!!asset('storage/img/truck-2-cover.jpg')!!}');">
+    <div class="slide" style="background-image:url('{!!asset('storage/img/sampul.jpg')!!}');">
         <div class="container">
             <div class="slide-captions text-left text-light">
 
