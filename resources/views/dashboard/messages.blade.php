@@ -41,7 +41,7 @@
                     </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/messages/archive/trash" class="nav-link">
                             <i class="far fa-trash-alt"></i> Trash
                         </a>
                     </li>

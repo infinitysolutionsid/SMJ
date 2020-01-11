@@ -1,10 +1,10 @@
 @extends('dashboard.messages')
-@section('card','Pesan masuk')
+@section('card','Tempat Sampah')
 @section('berkaspesan')
 <div class="col-md-9">
     <div class="card card-primary card-outline">
         <div class="card-header">
-            <h3 class="card-title">Inbox</h3>
+            <h3 class="card-title">Trashed</h3>
 
             <div class="card-tools">
                 <div class="input-group input-group-sm">
@@ -53,8 +53,8 @@
                         @if($messages->count()<1) <td colspan="4" class="text-center">No data messages founded!</td>
                             @else
                             @foreach ($messages as $msg) <tr>
-                                <td><a href="/messages/trash/{{$msg->message_id}}" class="btn btn-default btn-sm"><i
-                                            class="fas fa-trash-alt"></i></a>
+                                <td><a href="/messages/recover/{{$msg->message_id}}" class="btn btn-default btn-sm"
+                                        title="Recover pesan"><i class="fas fa-undo"></i></a>
                                 </td>
                                 <td class="mailbox-name"><a href="/messages/read/{{$msg->message_id}}"
                                         class="linkpesan">{{$msg->nama}}</a></td>

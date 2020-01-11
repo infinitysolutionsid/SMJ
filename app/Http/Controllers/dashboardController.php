@@ -33,12 +33,22 @@ class dashboardController extends Controller
     public function messages()
     {
         $messages = DB::table('messages')
-            ->where('messages.status', '=', ['readed', 'unread'])
+            ->where('messages.status', '!=', 'trashed')
             ->select('messages.*')
             ->orderBy('messages.created_at', 'DESC')
             ->paginate(30);
 
         return view('dashboard.folderpesan.inbox', ['messages' => $messages]);
+    }
+    public function Messagestrash()
+    {
+        $messages = DB::table('messages')
+            ->where('messages.status', '=', 'trashed')
+            ->select('messages.*')
+            ->orderBy('messages.created_at', 'DESC')
+            ->paginate(30);
+
+        return view('dashboard.folderpesan.trash', ['messages' => $messages]);
     }
     public function userconf()
     {
@@ -60,6 +70,13 @@ class dashboardController extends Controller
         $pesanmasuk->status = 'trashed';
         $pesanmasuk->save();
         return back()->with('sukses', 'Pesan berhasil dipindahkan ketempat sampah');
+    }
+    public function recovermessage(Request $request, $message_id)
+    {
+        $pesanmasuk = \App\MessagesModel::find($message_id);
+        $pesanmasuk->status = 'readed';
+        $pesanmasuk->save();
+        return back()->with('sukses', 'Pesan berhasil dipindahkan ke dalam kotak masuk');
     }
     public function kategoriadd(Request $request)
     {

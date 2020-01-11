@@ -22,22 +22,7 @@
                     Nama: {{$pesanmasuk->nama}}
                     <span class="mailbox-read-time float-right">{{$pesanmasuk->created_at}}</span></h6>
             </div>
-            <!-- /.mailbox-read-info -->
-            <div class="mailbox-controls with-border text-center">
-                <div class="btn-group">
-                    <a href="/messages/trash/{{$pesanmasuk->message_id}}" class="btn btn-default btn-sm"
-                        data-container="body"><i class="far fa-trash-alt"></i></a>
-                    <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body"
-                        title="Reply">
-                        <i class="fas fa-reply"></i></button>
-                    <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body"
-                        title="Forward">
-                        <i class="fas fa-share"></i></button>
-                </div>
-                <!-- /.btn-group -->
-                <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" title="Print">
-                    <i class="fas fa-print"></i></button>
-            </div>
+
             <!-- /.mailbox-controls -->
             <div class="mailbox-read-message">
                 <p>@if($pesanmasuk->messages==NULL)Tidak ada catatan pesan dilampirkan.
