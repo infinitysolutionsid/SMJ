@@ -25,9 +25,8 @@
             <!-- /.mailbox-read-info -->
             <div class="mailbox-controls with-border text-center">
                 <div class="btn-group">
-                    <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body"
-                        title="Delete">
-                        <i class="far fa-trash-alt"></i></button>
+                    <a href="/messages/trash/{{$pesanmasuk->message_id}}" class="btn btn-default btn-sm"
+                        data-container="body"><i class="far fa-trash-alt"></i></a>
                     <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body"
                         title="Reply">
                         <i class="fas fa-reply"></i></button>
@@ -41,7 +40,7 @@
             </div>
             <!-- /.mailbox-controls -->
             <div class="mailbox-read-message">
-                <p>@if($pesanmasuk->description==NULL)Tidak ada catatan pesan dilampirkan.
+                <p>@if($pesanmasuk->messages==NULL)Tidak ada catatan pesan dilampirkan.
                     @else {{$pesanmasuk->messages}} @endif</p>
             </div>
         </div>

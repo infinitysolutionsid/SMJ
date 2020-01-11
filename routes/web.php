@@ -37,8 +37,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/utility-item', 'dashboardController@utility');
     Route::post('/tambah-data-kategori', 'dashboardController@kategoriadd');
     Route::post('/tambah-data-item', 'dashboardController@itemadd');
-    Route::get('/messages', 'dashboardController@messages');
+    Route::get('/messages', 'dashboardController@messages')->name('messages');
     Route::get('/messages/read/{message_id}', 'dashboardController@readmessage');
+    Route::get('/messages/trash/{message_id}','dashboardController@trashmessage');
     Route::get('/user-config', 'dashboardController@userconf');
     Route::post('/tambah-data-user', 'dashboardController@tambahuser');
     // VIEW EDIT FORM

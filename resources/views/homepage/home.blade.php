@@ -5,7 +5,7 @@
 @section('content')
 @if(session('sukses'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-    <strong>Berhasil!</strong> {{session('sukses')}}
+    <strong>Berhasil!</strong> Pesan berhasil dikirim dan telah kami terima. Kami akan membalas dalam waktu 1x24 jam. Jika tidak ada balasan selama 2x24 jam. Silahkan email kami ke info@sumberparts.com. Terima kasih!
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -126,26 +126,34 @@
             </div>
             <div class="col-lg-5 background-colored text-light p-40">
                 <div class="text-medium">Contact Us</div>
-                <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form"
-                    method="post">
+@if(session('sukses'))
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Well done!</h4>
+                    Pesan berhasil dikirim dan telah kami terima. Kami akan membalas dalam waktu 1x24 jam. Jika tidak
+                        ada balasan selama 2x24 jam. Silahkan email kami ke info@sumberparts.com. Terima kasih!
+                    
+                </div>
+@endif
+                <form action="/kirimpesan" method="post">
+                    @csrf
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" aria-required="true" name="widget-contact-form-name"
-                            class="form-control required name" placeholder="Enter your Name">
+                        <input type="text" aria-required="true" name="nama" class="form-control required name"
+                            placeholder="Enter your Name">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" aria-required="true" required name="widget-contact-form-email"
+                        <input type="email" aria-required="true" required name="email"
                             class="form-control required email" placeholder="Enter your Email">
                     </div>
                     <div class="form-group">
                         <label for="email">Phone Number</label>
-                        <input type="text" aria-required="true" name="widget-contact-form-phone"
-                            class="form-control required" placeholder="Enter your Phone number">
+                        <input type="text" aria-required="true" name="nohp" class="form-control required"
+                            placeholder="Enter your Phone number">
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea type="text" name="widget-contact-form-message" rows="7" class="form-control required"
+                        <textarea type="text" name="notes" rows="7" class="form-control required"
                             placeholder="Enter your Message"></textarea>
                     </div>
                     <div class="form-group text-center">

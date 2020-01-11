@@ -33,6 +33,7 @@ class dashboardController extends Controller
     public function messages()
     {
         $messages = DB::table('messages')
+            ->where('messages.status', '=', ['readed', 'unread'])
             ->select('messages.*')
             ->orderBy('messages.created_at', 'DESC')
             ->paginate(30);
@@ -52,6 +53,13 @@ class dashboardController extends Controller
         $pesanmasuk->status = 'readed';
         $pesanmasuk->save();
         return view('dashboard.folderpesan.read', ['pesanmasuk' => $pesanmasuk]);
+    }
+    public function trashmessage(Request $request, $message_id)
+    {
+        $pesanmasuk = \App\MessagesModel::find($message_id);
+        $pesanmasuk->status = 'trashed';
+        $pesanmasuk->save();
+        return back()->with('sukses', 'Pesan berhasil dipindahkan ketempat sampah');
     }
     public function kategoriadd(Request $request)
     {

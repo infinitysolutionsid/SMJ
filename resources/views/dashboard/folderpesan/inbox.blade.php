@@ -40,23 +40,34 @@
             <div class="table-responsive mailbox-messages">
                 <table class="table table-hover table-striped">
                     <tbody>
-                        @foreach ($messages as $msg)
-                        <tr>
-
-                            <td><a href="/messages/read/{{$msg->message_id}}" class="btn btn-default btn-sm"><i
-                                        class="far fa-trash-alt"></i></a>
-                            </td>
-                            <td class="mailbox-name"><a href="/messages/read/{{$msg->message_id}}"
-                                    class="linkpesan">{{$msg->nama}}</a></td>
-                            <td class="mailbox-subject"><b><a href="/messages/read/{{$msg->message_id}}"
-                                        class="linkpesan">{{$msg->subject}}</a></b> -
-                                <a href="/messages/read/{{$msg->message_id}}"
-                                    class="linkpesan">{{str_limit($msg->messages, $limit=30)}}</a>
-                            </td>
-                            <td class="mailbox-date">{{$msg->created_at}}
-                            </td>
-                        </tr>
-                        @endforeach
+                        @if(session('sukses'))
+                        <td colspan="4">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Berhasil</strong> {{session('sukses')}}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </td>
+                        @endif
+                        @if($messages->count()<1) <td colspan="4" class="text-center">No data messages founded!</td>
+                            @else
+                            @foreach ($messages as $msg) <tr>
+                                <td><a href="/messages/trash/{{$msg->message_id}}" class="btn btn-default btn-sm"><i
+                                            class="far fa-trash-alt"></i></a>
+                                </td>
+                                <td class="mailbox-name"><a href="/messages/read/{{$msg->message_id}}"
+                                        class="linkpesan">{{$msg->nama}}</a></td>
+                                <td class="mailbox-subject"><b><a href="/messages/read/{{$msg->message_id}}"
+                                            class="linkpesan">{{$msg->subject}}</a></b> -
+                                    <a href="/messages/read/{{$msg->message_id}}"
+                                        class="linkpesan">{{str_limit($msg->messages, $limit=30)}}</a>
+                                </td>
+                                <td class="mailbox-date">{{$msg->created_at}}
+                                </td>
+                            </tr>
+                            @endforeach
+                            @endif
                     </tbody>
                 </table>
                 <!-- /.table -->
