@@ -32,18 +32,21 @@ Route::post('/registrasiproses', 'AuthenController@registrasi');
 // {}));
 // DASHBOARD
 
-Route::get('/dashboard', 'dashboardController@index');
-Route::get('/utility-item', 'dashboardController@utility');
-Route::post('/tambah-data-kategori', 'dashboardController@kategoriadd');
-Route::post('/tambah-data-item', 'dashboardController@itemadd');
-Route::get('/messages', 'dashboardController@messages');
-Route::get('/messages/read/{message_id}', 'dashboardController@readmessage');
-Route::get('/user-config', 'dashboardController@userconf');
-// VIEW EDIT FORM
-Route::get('/update-kategori/{id}', 'dashboardController@updatekategori');
-Route::get('/delete-kategori/{id}', 'dashboardController@deletekategori');
-Route::get('/update-item/{id}', 'dashboardController@updateitem');
-Route::get('/delete-item/{id}', 'dashboardController@deleteitem');
-// PROSES EDIT FORM
-Route::post('/proses-kategori/{id}', 'dashboardController@prosesupdatekategori');
-Route::post('/proses-item/{itemId}', 'dashboardController@prosesupdateitem');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', 'dashboardController@index');
+    Route::get('/utility-item', 'dashboardController@utility');
+    Route::post('/tambah-data-kategori', 'dashboardController@kategoriadd');
+    Route::post('/tambah-data-item', 'dashboardController@itemadd');
+    Route::get('/messages', 'dashboardController@messages');
+    Route::get('/messages/read/{message_id}', 'dashboardController@readmessage');
+    Route::get('/user-config', 'dashboardController@userconf');
+    Route::post('/tambah-data-user', 'dashboardController@tambahuser');
+    // VIEW EDIT FORM
+    Route::get('/update-kategori/{id}', 'dashboardController@updatekategori');
+    Route::get('/delete-kategori/{id}', 'dashboardController@deletekategori');
+    Route::get('/update-item/{id}', 'dashboardController@updateitem');
+    Route::get('/delete-item/{id}', 'dashboardController@deleteitem');
+    // PROSES EDIT FORM
+    Route::post('/proses-kategori/{id}', 'dashboardController@prosesupdatekategori');
+    Route::post('/proses-item/{itemId}', 'dashboardController@prosesupdateitem');
+});

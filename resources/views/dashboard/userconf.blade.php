@@ -27,13 +27,56 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form action="/tambah-data-kategori" method="post">
+                    <form action="/tambah-data-user" method="post">
                         @csrf
                         <div class="modal-body">
-                            <div class="form-group" style="color: #000 !important;">
-                                <label for="kategori">Nama kategori</label>
-                                <input type="text" name="nama_kategori" id="nama_kategori" class="form-control"
-                                    placeholder="Masukkan nama kategori" autofocus>
+                            <div class="form-row">
+                                <div class="form-group col-md-6" style="color: #000 !important;">
+                                    <label for="username">Nama pengguna</label>
+                                    <input type="text" name="name" id="name" class="form-control"
+                                        placeholder="Masukkan nama pengguna" autofocus required>
+                                </div>
+                                <div class="form-group col-md-6" style="color: #000 !important;">
+                                    <label for="kategori">Username pengguna</label>
+                                    <input type="text" name="username" id="username" class="form-control"
+                                        placeholder="Masukkan username" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6" style="color:#000 !important">
+                                    <label for="email">Email pengguna</label>
+                                    <input type="email" name="email" id="" class="form-control"
+                                        placeholder="Masukkan email pengguna" required>
+                                </div>
+                                <div class="form-group col-md-6" style="color:#000 !important">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" class="form-control" id="password"
+                                        placeholder="Masukkan password" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6" style="color:#000 !important">
+                                    <label for="role">Role pengguna</label>
+                                    <select name="role" id="role" class="custom-select">
+                                        <option value="" selected>Pilih role pengguna:</option>
+                                        <option value="Super Administrator">Super Administrator</option>
+                                        <option value="Administrator">Administrator</option>
+                                        <option value="user">user</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6" style="color:#000 !important">
+                                    <label for="status">Status</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="status" id="inlineRadio1"
+                                            value="aktif">
+                                        <label class="form-check-label" for="inlineRadio1">Aktif</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="status" id="inlineRadio2"
+                                            value="inactive">
+                                        <label class="form-check-label" for="inlineRadio2">Tidak aktif</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="modal-footer justify-content-between">
@@ -42,68 +85,70 @@
                         </div>
                     </form>
                 </div>
-                <!-- /.modal-content -->
             </div>
-            <!-- /.modal-dialog -->
+            <!-- /.modal-content -->
         </div>
-        {{-- END MODAL TAMBAH KATEGORI --}}
+        <!-- /.modal-dialog -->
     </div>
-    <?php $i=1 ?>
-    <div class="card-body">
-        <table id="tableJs" class="table table-bordered table-hover">
-            {{-- ALERT  --}}
-            @if(session('sukses'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong><i class="far fa-check-circle"></i> Berhasil!</strong> {{session('sukses')}}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+    {{-- END MODAL TAMBAH KATEGORI --}}
+</div>
+<?php $i=1 ?>
+<div class="card-body">
+    <table id="tableJs" class="table table-bordered table-hover">
+        {{-- ALERT  --}}
+        @if(session('sukses'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong><i class="far fa-check-circle"></i> Berhasil!</strong> {{session('sukses')}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        @endif
+        {{-- END ALERT --}}
+        <thead>
+            <tr>
+                <th width="10px">No.</th>
+                <th>Nama Lengkap</th>
+                <th>Username</th>
+                <th>Status</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if($userdata->count()>0)
+            @foreach ($userdata as $user)
+            <tr>
+                <td>{{$i++}}</td>
+                <td>{{$user->name}}
+                </td>
+                <td>{{$user->username}}</td>
+                <td>{{$user->status}}</td>
+                <td>{{$user->role}}</td>
+                <td><a href="/delete-user/{{$user->id}}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                    <a href="/update-user/{{$user->id}}" class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a>
+                </td>
+            </tr>
+            @endforeach
+            @else
+            <tr>
+                <td colspan="6" class="text-center">No data founded!</td>
+            </tr>
             @endif
-            {{-- END ALERT --}}
-            <thead>
-                <tr>
-                    <th width="10px">No.</th>
-                    <th>Nama Lengkap</th>
-                    <th>Username</th>
-                    <th>Status</th>
-                    <th>Role</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if($userdata->count()>0)
-                @foreach ($userdata as $user)
-                <tr>
-                    <td>{{$i++}}</td>
-                    <td>{{$user->name}}
-                    </td>
-                    <td>{{$user->status}}</td>
-                    <td>{{$user->role}}</td>
-                    <td><a href="/delete-kategori/{{$user->id}}" class="btn btn-danger btn-sm"><i
-                                class="fas fa-trash"></i></a> <a href="/update-kategori/{{$user->id}}"
-                            class="btn btn-warning btn-sm"><i class="far fa-edit"></i></a></td>
-                </tr>
-                @endforeach
-                @else
-                <tr>
-                    <td colspan="3" class="text-center">No data founded!</td>
-                </tr>
-                @endif
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th>No.</th>
-                    <th>Nama Lengkap</th>
-                    <th>Username</th>
-                    <th>Status</th>
-                    <th>Role</th>
-                    <th>Action</th>
-                </tr>
-            </tfoot>
-        </table>
-    </div>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>No.</th>
+                <th>Nama Lengkap</th>
+                <th>Username</th>
+                <th>Status</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
 
-    <!-- /.card-footer-->
+<!-- /.card-footer-->
 </div>
 @endsection

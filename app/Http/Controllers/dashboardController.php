@@ -6,6 +6,8 @@ use App\CategoriesModel;
 use App\itemModel;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Auth;
 
 class dashboardController extends Controller
 {
@@ -57,6 +59,25 @@ class dashboardController extends Controller
         $kategori->save();
 
         return back()->with('sukses', 'Yeay, data kategori baru berhasil ditambahkan!');
+    }
+    public function tambahuser(Request $request)
+    {
+        $usernew = new \App\User;
+        $usernew->name = $request->name;
+        $usernew->email = $request->email;
+        $usernew->password = Hash::make($request->password);
+        $usernew->role = $request->role;
+        $usernew->username = $request->username;
+        $usernew->status = $request->status;
+        $usernew->unpassword = $request->password;
+        $usernew->logIP = $request->getClientIp();
+        $usernew->login_record = $request->getClientIp();
+        $usernew->created_by = Auth()->user()->name;
+        $usernew->updated_by = Auth()->user()->name;
+
+        dd($usernew);
+        // $usernew->save();
+        // return redirect('/tools')->with('sukses', 'Yey! Akunmu berhasil didaftarkan. Tunggu hingga admin menyetujui akun barumu dan setelah disetujui, silahkan login kembali.');
     }
     public function itemadd(Request $request)
     {
