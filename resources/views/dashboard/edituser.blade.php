@@ -34,11 +34,11 @@
             <div class="form-row">
                 <div class="form-group col-md-6" style="color:#000 !important">
                     <label for="role">Role pengguna</label>
-                    <select name="role" id="role" class="custom-select">
-                        <option value="" selected>Pilih role pengguna:</option>
-                        <option @if($userfind->role=='Super Administrator')@endif>Super Administrator</option>
-                        <option @if($userfind->role=='Administrator')@endif>Administrator</option>
-                        <option @if($userfind->role=='user')@endif>user</option>
+                    <select name="role" id="role" class="custom-select" required>
+                        <option>Pilih role pengguna:</option>
+                        <option @if($userfind->role=='Super Administrator') selected @endif>Super Administrator</option>
+                        <option @if($userfind->role=='Administrator') selected @endif>Administrator</option>
+                        <option @if($userfind->role=='user') selected @endif>user</option>
                     </select>
                 </div>
                 <div class="form-group col-md-6" style="color:#000 !important">
