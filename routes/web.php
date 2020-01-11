@@ -46,7 +46,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/delete-kategori/{id}', 'dashboardController@deletekategori');
     Route::get('/update-item/{id}', 'dashboardController@updateitem');
     Route::get('/delete-item/{id}', 'dashboardController@deleteitem');
+    Route::get('/update-user/{id}', 'dashboardController@updateuser');
+    Route::get('/delete-user/{id}', 'dashboardController@deleteuser');
     // PROSES EDIT FORM
     Route::post('/proses-kategori/{id}', 'dashboardController@prosesupdatekategori');
     Route::post('/proses-item/{itemId}', 'dashboardController@prosesupdateitem');
+    Route::post('/proses-user/{id}', 'dashboardController@prosesuser');
 });

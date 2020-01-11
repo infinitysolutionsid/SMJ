@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\CategoriesModel;
 use App\itemModel;
+use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -75,9 +76,9 @@ class dashboardController extends Controller
         $usernew->created_by = Auth()->user()->name;
         $usernew->updated_by = Auth()->user()->name;
 
-        dd($usernew);
-        // $usernew->save();
-        // return redirect('/tools')->with('sukses', 'Yey! Akunmu berhasil didaftarkan. Tunggu hingga admin menyetujui akun barumu dan setelah disetujui, silahkan login kembali.');
+        // dd($usernew);
+        $usernew->save();
+        return back()->with('sukses', 'Yey! Akunmu berhasil didaftarkan. Tunggu hingga admin menyetujui akun barumu dan setelah disetujui, silahkan login kembali.');
     }
     public function itemadd(Request $request)
     {
@@ -160,6 +161,41 @@ class dashboardController extends Controller
                 DB::statement('ALTER TABLE items AUTO_INCREMENT = ' . (count(itemModel::all()) + 1) . ';');
 
                 return back()->with('suksesitem', 'Data produk berhasil dihapus!');
+            }
+        }
+    }
+    public function updateuser($id)
+    {
+        $userfind = \App\User::find($id);
+        return view('dashboard.edituser', ['userfind' => $userfind]);
+    }
+    public function prosesuser(Request $request, $id)
+    {
+        $user =  \App\User::find($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->role = $request->role;
+        $user->username = $request->username;
+        $user->status = $request->status;
+        $user->unpassword = $request->password;
+        $user->logIP = $request->getClientIp();
+        $user->updated_by = Auth()->user()->name;
+
+        // dd($user);
+        $user->save();
+        return redirect('/user-config')->with('sukses', 'Data pengguna berhasil diperbarui. Coba cek ya..');
+    }
+    public function deleteuser($id)
+    {
+        $data_member = User::find($id);
+
+        if ($data_member) {
+            if ($data_member->delete()) {
+
+                DB::statement('ALTER TABLE users AUTO_INCREMENT = ' . (count(User::all()) + 1) . ';');
+
+                return back()->with('suser', 'Data pengguna berhasil dihapus dari database.');
             }
         }
     }
