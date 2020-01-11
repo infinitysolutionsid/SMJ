@@ -16,10 +16,12 @@ class AuthenController extends Controller
     public function auth(Request $request)
     {
         // dd($request->all());
-        if (Auth::attempt($request->only('username', 'password'))) {
+        if (Auth::attempt($request->only('username', 'password') + ['status' => 'aktif'])) {
             return redirect('/dashboard');
         }
-        return back();
+        return back()->with('gagal', 'Auth permission or your data login has no authorization. Please contact your
+                    developer
+                    or administrator.');
     }
     public function logout()
     {

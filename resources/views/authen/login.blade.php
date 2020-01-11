@@ -29,7 +29,15 @@
         <div class="container-login100">
             @if(session('sukses'))
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>{{session('sukses')}}</strong>
+                <strong>Berhasil! {{session('sukses')}}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @endif
+            @if(session('gagal'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Auth failed! {{session('gagal')}}</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
