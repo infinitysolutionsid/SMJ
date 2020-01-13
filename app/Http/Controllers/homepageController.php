@@ -18,7 +18,7 @@ class homepageController extends Controller
             ->where('items.type_product', '=', 'Hydraulic Dump Truck')
             ->join('categoriesSparepart', 'categoriesSparepart.id', '=', 'items.kategori_id')
             ->select('items.*', 'categoriesSparepart.*')
-            ->paginate(12);
+            ->paginate(9);
         $kategori = DB::table('categoriesSparepart')
             ->select('categoriesSparepart.*')
             ->get();
@@ -30,7 +30,7 @@ class homepageController extends Controller
             ->where('items.type_product', '=', 'Sparepart Truck')
             ->join('categoriesSparepart', 'categoriesSparepart.id', '=', 'items.kategori_id')
             ->select('items.*', 'categoriesSparepart.*')
-            ->paginate(12);
+            ->paginate(9);
         $kategori = DB::table('categoriesSparepart')
             ->select('categoriesSparepart.*')
             ->get();

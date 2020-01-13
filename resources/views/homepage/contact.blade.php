@@ -12,8 +12,6 @@
             <ul>
                 <li><a href="#">Home</a>
                 </li>
-                <li><a href="#">Shop</a>
-                </li>
                 <li class="active"><a href="/contact">Hubungi kami</a>
                 </li>
             </ul>
