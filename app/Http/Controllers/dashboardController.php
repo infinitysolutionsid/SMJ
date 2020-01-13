@@ -82,6 +82,8 @@ class dashboardController extends Controller
     {
         $kategori = new \App\CategoriesModel;
         $kategori->nama_kategori  = $request->nama_kategori;
+        $kategori->created_by = Auth()->user()->name;
+        $kategori->updated_by = Auth()->user()->name;
         $kategori->save();
 
         return back()->with('sukses', 'Yeay, data kategori baru berhasil ditambahkan!');
@@ -112,6 +114,8 @@ class dashboardController extends Controller
         $item->kategori_id = $request->kategori_id;
         $item->description = $request->description;
         $item->type_product = $request->type_product;
+        $item->created_by = Auth()->user()->name;
+        $item->updated_by = Auth()->user()->name;
         if ($request->hasFile('images')) {
             $request->file('images')->move('storage/shop/img/', $request->file('images')->getClientOriginalName());
             $item->images = $request->file('images')->getClientOriginalName();
@@ -129,6 +133,7 @@ class dashboardController extends Controller
     {
         $datkategori = \App\CategoriesModel::find($id);
         $datkategori->nama_kategori = $request->nama_kategori;
+        $datkategori->updated_by = Auth()->user()->name;
         $datkategori->save();
 
         return redirect('/utility-item')->with('sukses', 'Kategori nya sudah berhasil diubah! Coba cek ya.. :)');
@@ -166,6 +171,7 @@ class dashboardController extends Controller
         $item->kategori_id = $request->kategori_id;
         $item->description = $request->description;
         $item->type_product = $request->type_product;
+        $item->updated_by = Auth()->user()->name;
         if ($request->hasFile('images')) {
             $request->file('images')->move('storage/shop/img/', $request->file('images')->getClientOriginalName());
             $item->images = $request->file('images')->getClientOriginalName();
