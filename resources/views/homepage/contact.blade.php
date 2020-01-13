@@ -23,12 +23,15 @@
         <div class="row">
             <div class="col-lg-6">
                 <h3 class="text-uppercase">Hubungi kami</h3>
+                @if(session('sukses'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <strong>Berhasil!</strong> Pesan kamu berhasil dikirim!
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                @endif
+
                 <div class="m-t-30">
                     <form action="/kirimpesan" method="post">
                         @csrf
