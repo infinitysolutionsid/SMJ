@@ -19,7 +19,7 @@
                         <option value="@if($item->type_product=='Hydraulic Dump Truck')Hydraulic Dump Truck
                             @elseif($item->type_product=='Sparepart Truck')Sparepart Truck @else Lain lain">
                             @if($item->type_product=='Hydraulic Dump Truck')Hydraulic Dump Truck
-                            @elseif($item->type_product=='Sparepart Truck')Sparepart Truck @else Lain lain"
+                            @elseif($item->type_product=='Sparepart Truck')Sparepart Truck @else Lain lain @endif"
                         </option>
                     </select>
                 </div>

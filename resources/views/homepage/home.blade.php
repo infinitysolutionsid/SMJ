@@ -5,7 +5,8 @@
 @section('content')
 @if(session('sukses'))
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-    <strong>Berhasil!</strong> Pesan berhasil dikirim dan telah kami terima. Kami akan membalas dalam waktu 1x24 jam. Jika tidak ada balasan selama 2x24 jam. Silahkan email kami ke info@sumberparts.com. Terima kasih!
+    <strong>Berhasil!</strong> Pesan berhasil dikirim dan telah kami terima. Kami akan membalas dalam waktu 1x24 jam.
+    Jika tidak ada balasan selama 2x24 jam. Silahkan email kami ke info@sumberparts.com. Terima kasih!
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -126,14 +127,14 @@
             </div>
             <div class="col-lg-5 background-colored text-light p-40">
                 <div class="text-medium">Contact Us</div>
-@if(session('sukses'))
+                @if(session('sukses'))
                 <div class="alert alert-success" role="alert">
                     <h4 class="alert-heading">Well done!</h4>
                     Pesan berhasil dikirim dan telah kami terima. Kami akan membalas dalam waktu 1x24 jam. Jika tidak
-                        ada balasan selama 2x24 jam. Silahkan email kami ke info@sumberparts.com. Terima kasih!
-                    
+                    ada balasan selama 2x24 jam. Silahkan email kami ke info@sumberparts.com. Terima kasih!
+
                 </div>
-@endif
+                @endif
                 <form action="/kirimpesan" method="post">
                     @csrf
                     <div class="form-group">
