@@ -23,7 +23,7 @@
             <div class="mailbox-controls">
                 <!-- Check all button -->
                 <!-- /.btn-group -->
-                <a href="javascript:window.location.reload(true)" class="btn btn-default btn-sm"><i
+                <a href="" class="btn btn-default btn-sm"><i
                         class="fas fa-sync-alt"></i></a>
                 <div class="float-right">
                     {{$messages->links()}}

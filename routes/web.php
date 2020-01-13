@@ -14,6 +14,7 @@
 Route::get('/', 'homepageController@index');
 Route::get('/hydraulic-dump-truck', 'homepageController@shop1');
 Route::get('/sparepart-truck', 'homepageController@shop2');
+Route::get('/kategori-item/{id}', 'homepageController@viewcategory');
 Route::get('/ajax-product/{itemId}', 'homepageController@quickview');
 Route::get('/dapatkan-penawaran/{itemId}', 'homepageController@penawaran');
 Route::post('/kirim-penawaran', 'homepageController@kirimpenawaran');
@@ -51,6 +52,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/delete-item/{id}', 'dashboardController@deleteitem');
     Route::get('/update-user/{id}', 'dashboardController@updateuser');
     Route::get('/delete-user/{id}', 'dashboardController@deleteuser');
+
     // PROSES EDIT FORM
     Route::post('/proses-kategori/{id}', 'dashboardController@prosesupdatekategori');
     Route::post('/proses-item/{itemId}', 'dashboardController@prosesupdateitem');

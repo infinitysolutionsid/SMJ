@@ -97,7 +97,7 @@
                     <h4 class="widget-title">Product categories</h4>
                     <ul class="list list-lines">
                         @foreach ($kategori as $item)
-                        <li><a href="#">{{$item->nama_kategori}}</a></span>
+                        <li><a href="/kategori-item/{{$item->id}}">{{$item->nama_kategori}}</a></span>
                         </li>
                         @endforeach
                     </ul>
