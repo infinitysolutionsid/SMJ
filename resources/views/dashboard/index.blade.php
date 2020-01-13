@@ -198,6 +198,8 @@
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
     <script src="{!!asset('dashboard_admin/plugins/jquery/jquery.min.js')!!}"></script>
+    <!-- PAGE SCRIPTS -->
+    <script src="{!!asset('dashboard_admin/dist/js/pages/dashboard2.js')!!}"></script>
     <!-- Bootstrap -->
     <script src="{!!asset('dashboard_admin/plugins/bootstrap/js/bootstrap.bundle.min.js')!!}"></script>
     <!-- overlayScrollbars -->
@@ -220,8 +222,7 @@
     <!-- ChartJS -->
     <script src="{!!asset('dashboard_admin/plugins/chart.js/Chart.min.js')!!}"></script>
 
-    <!-- PAGE SCRIPTS -->
-    <script src="{!!asset('dashboard_admin/dist/js/pages/dashboard2.js')!!}"></script>
+
     <script>
         $(document).ready(function () {
             $('#tableJs').DataTable({
