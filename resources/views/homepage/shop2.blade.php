@@ -26,10 +26,10 @@
 
             <div class="content col-lg-9">
                 <div class="row m-b-20">
-                    <div class="col-lg-6 p-t-10 m-b-20">
+                    <div class="col-lg-8 p-t-10 m-b-20">
                         <h3 class="m-b-20">Sparepart Truck</h3>
-                        <p>Lorem ipsum dolor sit amet. Accusamus, sit, exercitationem, consequuntur, assumenda iusto eos
-                            commodi alias.</p>
+                        <input type="search" name="search" id="" placeholder="Cari produk disini..."
+                            class="form-control">
                     </div>
                 </div>
 

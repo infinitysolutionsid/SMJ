@@ -10528,7 +10528,7 @@ body.breakpoint-xs .page-error-404 {
 
 .hero-heading-2 {
     padding: 20px;
-    background-color: #111;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 8px
 }
 
