@@ -113,7 +113,8 @@
             </div>
             <div class="copyright-content">
                 <div class="container">
-                    <div class="copyright-text text-center">&copy; 2019 SUMBER DIESEL
+                    <?php $yearCurrent = date('Y'); ?>
+                    <div class="copyright-text text-center">&copy; {{$yearCurrent}} SUMBER DIESEL
                         All Rights Reserved.<a href="//infinitysolutions.co.id" target="_blank"> Infinity Solutions</a>
                     </div>
                 </div>
