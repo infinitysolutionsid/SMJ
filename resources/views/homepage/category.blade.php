@@ -35,8 +35,7 @@
 <section id="page-content" class="sidebar-right">
     <div class="container">
         <div class="row">
-
-            <div class="content col-lg-9">
+            <div class="content col-lg-8">
                 <div class="row m-b-20">
                     <div class="col-lg-6 p-t-10 m-b-20">
                         <h3 class="m-b-20">@if($itemkategori->count()<1) No data founded @else @foreach ($itemkategori->
@@ -45,8 +44,7 @@
                                 @endforeach
                                 @endif
                         </h3>
-                        <p>Lorem ipsum dolor sit amet. Accusamus, sit, exercitationem, consequuntur, assumenda iusto eos
-                            commodi alias.</p>
+
                     </div>
                 </div>
 
@@ -105,13 +103,10 @@
                 <ul class="pagination">
                     {{$itemkategori->links()}}
                 </ul>
-
             </div>
-
         </div>
 
-        <div class="sidebar sticky-sidebar col-lg-3">
-
+        <div class="sidebar sticky-sidebar col-lg-4">
             <div class="widget widget-archive">
                 <h4 class="widget-title">Product categories</h4>
                 <ul class="list list-lines">
@@ -121,24 +116,14 @@
                     @endforeach
                 </ul>
             </div>
-
-            {{-- <div class="widget widget-tags">
-                    <h4 class="widget-title">Tags</h4>
-                    <div class="tags">
-                        <a href="#">Design</a>
-                        <a href="#">Portfolio</a>
-                        <a href="#">Digital</a>
-                        <a href="#">Branding</a>
-                        <a href="#">HTML</a>
-                        <a href="#">Clean</a>
-                        <a href="#">Peace</a>
-                        <a href="#">Love</a>
-                        <a href="#">CSS3</a>
-                        <a href="#">jQuery</a>
-                    </div>
-                </div> --}}
-
-
+            <div class="widget widget-tags">
+                <h4 class="widget-title">Product Categories</h4>
+                <div class="tags">
+                    @foreach ($kategori as $item)
+                    <a href="/kategori-item/{{$item->id}}">{{$item->nama_kategori}}</a>
+                    @endforeach
+                </div>
+            </div>
         </div>
     </div>
 </section>
