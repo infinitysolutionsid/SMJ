@@ -137,6 +137,7 @@
                                         <option value="" selected>Pilih jenis</option>
                                         <option value="Hydraulic Dump Truck">Hydraulic Dump Truck</option>
                                         <option value="Sparepart Truck">Sparepart Truck</option>
+                                        <option value="Sparepart Mobil">Sparepart Mobil</option>
                                         <option value="Lain lain">Lain lain</option>
                                     </select>
                                 </div>

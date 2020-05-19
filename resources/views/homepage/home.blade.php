@@ -76,7 +76,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="card">
                     <img src="{!!asset('storage/img/hydraulic.jpg')!!}" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -87,11 +87,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="card">
                     <img src="{!!asset('storage/img/sparepart.jpg')!!}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Spareparts Diesel</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the
+                            bulk of the card's content.</p>
+                        <a href="/sparepart-truck" class="btn btn-primary">See products</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{!!asset('storage/img/sparepart.jpg')!!}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Spareparts Mobil</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the
                             bulk of the card's content.</p>
                         <a href="/sparepart-truck" class="btn btn-primary">See products</a>
@@ -118,6 +129,12 @@
                     </div>
                     <div class="ac-item">
                         <h5 class="ac-title">Spareparts Truck</h5>
+                        <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                            labore et dolore magnam aliquam quaerat voluptatem.</div>
+                    </div>
+                    <div class="ac-item">
+                        <h5 class="ac-title">Spareparts Mobil</h5>
                         <div class="ac-content">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
                             consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
                             labore et dolore magnam aliquam quaerat voluptatem.</div>

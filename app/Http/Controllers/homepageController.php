@@ -36,6 +36,18 @@ class homepageController extends Controller
             ->get();
         return view('homepage.shop2', ['kategori' => $kategori, 'itemkategori' => $itemkategori]);
     }
+    public function shop3()
+    {
+        $itemkategori = DB::table('items')
+            ->where('items.type_product', '=', 'Sparepart Mobil')
+            ->join('categoriesSparepart', 'categoriesSparepart.id', '=', 'items.kategori_id')
+            ->select('items.*', 'categoriesSparepart.*')
+            ->paginate(9);
+        $kategori = DB::table('categoriesSparepart')
+            ->select('categoriesSparepart.*')
+            ->get();
+        return view('homepage.shop3', ['kategori' => $kategori, 'itemkategori' => $itemkategori]);
+    }
     public function viewcategory($id)
     {
         $itemkategori = DB::table('items')

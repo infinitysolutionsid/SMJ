@@ -14,6 +14,7 @@
 Route::get('/', 'homepageController@index');
 Route::get('/hydraulic-dump-truck', 'homepageController@shop1');
 Route::get('/sparepart-truck', 'homepageController@shop2');
+Route::get('/sparepart-mobil', 'homepageController@shop3');
 Route::get('/kategori-item/{id}', 'homepageController@viewcategory');
 Route::get('/ajax-product/{itemId}', 'homepageController@quickview');
 Route::get('/dapatkan-penawaran/{itemId}', 'homepageController@penawaran');

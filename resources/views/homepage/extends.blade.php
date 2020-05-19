@@ -65,6 +65,7 @@
                                             <li><a href="/hydraulic-dump-truck">Hydraulic Dump Truck</a>
                                             </li>
                                             <li><a href="/sparepart-truck">Sparepart Truck</a></li>
+                                            <li><a href="/sparepart-mobil">Sparepart Mobil</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="/about">Tentang kami</a></li>
